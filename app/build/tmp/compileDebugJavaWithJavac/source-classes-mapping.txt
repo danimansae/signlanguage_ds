@@ -1,0 +1,29 @@
+com/google/codelab/mlkit/TextGraphic.java
+ com.google.codelab.mlkit.TextGraphic
+com/google/codelab/mlkit/databinding/ActivityMainBinding.java
+ com.google.codelab.mlkit.databinding.ActivityMainBinding
+com/google/codelab/mlkit/GraphicOverlay.java
+ com.google.codelab.mlkit.GraphicOverlay
+ com.google.codelab.mlkit.GraphicOverlay$Graphic
+com/google/codelab/mlkit/databinding/ActivityTrnBinding.java
+ com.google.codelab.mlkit.databinding.ActivityTrnBinding
+com/google/codelab/mlkit/LabelGraphic.java
+ com.google.codelab.mlkit.LabelGraphic
+com/google/codelab/mlkit/BuildConfig.java
+ com.google.codelab.mlkit.BuildConfig
+com/google/codelab/mlkit/MainActivity.java
+ com.google.codelab.mlkit.MainActivity
+ com.google.codelab.mlkit.MainActivity$1
+ com.google.codelab.mlkit.MainActivity$2
+ com.google.codelab.mlkit.MainActivity$3
+ com.google.codelab.mlkit.MainActivity$4
+ com.google.codelab.mlkit.MainActivity$5
+ com.google.codelab.mlkit.MainActivity$6
+ com.google.codelab.mlkit.MainActivity$7
+ com.google.codelab.mlkit.MainActivity$8
+com/google/codelab/mlkit/Translation.java
+ com.google.codelab.mlkit.Translation
+ com.google.codelab.mlkit.Translation$1
+ com.google.codelab.mlkit.Translation$Morpheme
+ com.google.codelab.mlkit.Translation$Morphemecomparator
+ com.google.codelab.mlkit.Translation$NameEntity
