@@ -1,6 +1,7 @@
 package com.google.codelab.mlkit;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -91,6 +93,11 @@ public class Translation extends AppCompatActivity {
     static List<Morpheme> morphemes = null;
     static String pre_text = "";
 
+    // Viedo 관련
+    private static final String video_url = "https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.mp4?alt=media&token=fd8d6bac-57a0-421d-b3c2-6e412b40fd04";
+    private ArrayList<String> array = new ArrayList<String>();
+    private int count;
+
     @Override
     @RequiresApi(api = Build.VERSION_CODES.N)
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,18 +111,48 @@ public class Translation extends AppCompatActivity {
         String text = "";           // 분석할 텍스트 데이터
         Gson gson = new Gson();
 
-
         TextView text_trn = findViewById(R.id.text_trn);
         VideoView videoView = findViewById(R.id.videoView);
 
-        //Video View에서 보여줄 동영상주소
+        // FirebaseStorage storage = FirebaseStroage.getInstance();
+
+        // videoView
         ArrayList<String> uriArr = new ArrayList<>();
         Uri uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.mp4?alt=media&token=fd8d6bac-57a0-421d-b3c2-6e412b40fd04");
         videoView.setVideoURI(uri);
+        videoView.start();
 
+        if (!(videoView.isPlaying())) {
+            uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%A6%AC%EB%B2%A0%EC%9D%B4%ED%8A%B8.mp4?alt=media&token=f5341763-aed9-4d29-ac4f-dc0e6b8ecbe5");
+            videoView.setVideoURI(uri);
+            videoView.start();
+        }
 
-        //비디오 컨트롤바.
-        //videoView.setMediaController(new MediaController(this));
+        array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%A6%AC%EB%B2%A0%EC%9D%B4%ED%8A%B8.mp4?alt=media&token=f5341763-aed9-4d29-ac4f-dc0e6b8ecbe5");
+        count = 0;
+
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView);
+
+        Uri video = Uri.parse(video_url);
+        // videoView.setMediaController(mediaController); 재생바
+        videoView.setVideoURI(video);
+        videoView.requestFocus();
+
+        MediaPlayer.OnCompletionListener mCompelete = new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                // 재생할 비디오가 남아있을 경우
+                if (array.size() > count) {
+                    Uri video1 = Uri.parse(array.get(count).toString());
+                    count++;
+                    videoView.setVideoURI(video1);
+                    videoView.start();
+                }
+            }
+        };
+
+        videoView.setOnCompletionListener(mCompelete);
         videoView.start();
 
         Intent intent = getIntent();
