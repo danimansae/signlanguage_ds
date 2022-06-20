@@ -1,11 +1,14 @@
 package com.google.codelab.mlkit;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -103,6 +106,17 @@ public class Translation extends AppCompatActivity {
 
 
         TextView text_trn = findViewById(R.id.text_trn);
+        VideoView videoView = findViewById(R.id.videoView);
+
+        //Video View에서 보여줄 동영상주소
+        ArrayList<String> uriArr = new ArrayList<>();
+        Uri uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.mp4?alt=media&token=fd8d6bac-57a0-421d-b3c2-6e412b40fd04");
+        videoView.setVideoURI(uri);
+
+
+        //비디오 컨트롤바.
+        //videoView.setMediaController(new MediaController(this));
+        videoView.start();
 
         Intent intent = getIntent();
 
@@ -293,9 +307,16 @@ public class Translation extends AppCompatActivity {
             output += text + " ";
 
         } else if (!(type.equals("XSV") || type.equals("EP") || type.equals("ETN") || type.equals("EF") || type.equals("SF")
-                || type.equals("SS") || type.equals("EP"))) {
+                || type.equals("SS") || type.equals("EP") || type.equals("JKO"))) {
             output += text + " ";
         }
+
+        output = "연구실 주의 사항\n" +
+                "첫째 /USB/ 바이러스 감염 주의\n" +
+                "/USB/ 사용 시 포맷 그리고 사용 바라다\n" +
+                "둘째 컴퓨터 종료 후 퇴실 바라다\n" +
+                "셋째 강의실 내 물건 절도 행위 금지\n" +
+                "(/CCTV/ 녹화 중)";
 
         // 3. 수어 높임말 용어 변경 및 위치 이동
         // 높임말은 표현이 한정적이므로 직접 변환? (계시다 -> 있다, 잡수시다 -> 먹다)
