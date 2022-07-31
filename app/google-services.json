@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:864459952478:android:16c42e1bc5a470a09d7fcf",
+        "mobilesdk_app_id": "1:864459952478:android:8697e5bc64e6d89e9d7fcf",
         "android_client_info": {
           "package_name": "com.google.codelab.mlkit"
         }

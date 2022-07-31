@@ -14,7 +14,11 @@ import android.widget.VideoView;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.codelab.mlkit.R;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageMetadata;
+import com.google.firebase.storage.StorageReference;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
@@ -26,9 +30,12 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -94,9 +101,11 @@ public class Translation extends AppCompatActivity {
     static String pre_text = "";
 
     // Viedo 관련
-    private static final String video_url = "https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.mp4?alt=media&token=fd8d6bac-57a0-421d-b3c2-6e412b40fd04";
+    private FirebaseStorage storage;
+    private static String video_url = "";
     private ArrayList<String> array = new ArrayList<String>();
     private int count;
+    String filePath = "";
 
     @Override
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -114,21 +123,34 @@ public class Translation extends AppCompatActivity {
         TextView text_trn = findViewById(R.id.text_trn);
         VideoView videoView = findViewById(R.id.videoView);
 
-        // FirebaseStorage storage = FirebaseStroage.getInstance();
 
-        // videoView
-        ArrayList<String> uriArr = new ArrayList<>();
-        Uri uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4.mp4?alt=media&token=fd8d6bac-57a0-421d-b3c2-6e412b40fd04");
+        // ** videoView
+
+        // 생성된 FirebaseStorage를 참조하는 storage 생성
+        String fileName = "디플레이션.mp4"; // intent로 실제 사용되는 형태소 받아오기
+
+        // Encoding...
+        try {
+            fileName = URLEncoder.encode(fileName, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        video_url = "https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/"+ fileName + "?alt=media";
+
+        // Storage 내부의 수어 영상 파일명을 가리키는 참조 생성
+        Uri uri = Uri.parse(video_url);
         videoView.setVideoURI(uri);
         videoView.start();
 
         if (!(videoView.isPlaying())) {
-            uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%A6%AC%EB%B2%A0%EC%9D%B4%ED%8A%B8.mp4?alt=media&token=f5341763-aed9-4d29-ac4f-dc0e6b8ecbe5");
+            uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/\"+ fileName + \"?alt=media");
             videoView.setVideoURI(uri);
             videoView.start();
         }
 
-        array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%A6%AC%EB%B2%A0%EC%9D%B4%ED%8A%B8.mp4?alt=media&token=f5341763-aed9-4d29-ac4f-dc0e6b8ecbe5");
+        // array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/바이러스.mp4?alt=media");
+        // array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%94%94%ED%94%8C%EB%A0%88%EC%9D%B4%EC%85%98.mp4?alt=media&token=72fc1dae-4c8a-43b0-9f30-c205d5139b8e");
         count = 0;
 
         MediaController mediaController = new MediaController(this);
@@ -160,7 +182,6 @@ public class Translation extends AppCompatActivity {
         // 언어 분석 기술(문어)
         pre_text = intent.getStringExtra("out_text");
         text = pre_text;
-
 
         /*
         "실습실 주의사항 " +
@@ -348,12 +369,22 @@ public class Translation extends AppCompatActivity {
             output += text + " ";
         }
 
+        output = "실습실 주의 사항\n" +
+                "1 USB 바이러스 감염 주의\n" +
+                "(USB 사용 시 포맷 고 사용하 바라)\n" +
+                "2 컴퓨터 종료 후 퇴실하 바라\n" +
+                "3 강의실 내 비품 및 소모품 절도 행위 금지하\n" +
+                "(CCTV 녹화 중)";
+
+
+        /*
         output = "연구실 주의 사항\n" +
                 "첫째 /USB/ 바이러스 감염 주의\n" +
                 "/USB/ 사용 시 포맷 그리고 사용 바라다\n" +
                 "둘째 컴퓨터 종료 후 퇴실 바라다\n" +
                 "셋째 강의실 내 물건 절도 행위 금지\n" +
                 "(/CCTV/ 녹화 중)";
+         */
 
         // 3. 수어 높임말 용어 변경 및 위치 이동
         // 높임말은 표현이 한정적이므로 직접 변환? (계시다 -> 있다, 잡수시다 -> 먹다)
@@ -382,13 +413,10 @@ public class Translation extends AppCompatActivity {
                 }
 
                 // 2. 수어 표현의 변환 및 시제 표현
-                if (object.getString("type").equals("NNB")) {
-                    if (
                     // 의존 명사는 다 NNB로 취급이 되어서 단위성 의존 명사(마리, 명, 그루, 개 등)을 찾아내서 어떻게 제거하는지?
                     // 숫자(SN), 수사(NR) 태그 뒤에 NNB가 오는 경우 제거
                     // 시제를 나타내는 어미가 선어말 어미(EP)에도 포함되어 있는데 어떻게 구분하는지?
                     // EP를 따로 검사하여서 었, 였과 같은 시제 표현을 발견하면 '끝'이라는 수어적 표현으로 변환되게
-                }
 
                // 3. 수어 높임말 용어 변경 및 위치 이동
                     // 높임말은 표현이 한정적이므로 직접 변환? (계시다 -> 있다, 잡수시다 -> 먹다)
