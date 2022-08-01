@@ -6,6 +6,15 @@
     <item quantity="few">%d nova obvestila</item>
     <item quantity="other">%d novih obvestil</item>
   </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"Brez"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"Skladba <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"Zvočni posnetek"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"Običajno"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"Hitrost predvajanja"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"Izklopljeno"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"Podnapis <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> – <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"Podnapis <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Krmarjenje na začetek"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Pomik navzgor"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Več možnosti"</string>
@@ -55,6 +64,7 @@
     <string name="common_open_on_phone">Odpiranje v telefonu</string>
     <string name="common_signin_button_text">Prijava</string>
     <string name="common_signin_button_text_long">Prijava z računom Google</string>
+    <string msgid="6743534657295236036" name="default_notification_channel_name">"Zdaj se predvaja"</string>
     <string name="error_icon_content_description">Napaka</string>
     <string name="exposed_dropdown_menu_content_description">Prikaz spustnega menija</string>
     <string name="icon_content_description">Ikona pogovornega okna</string>
@@ -71,6 +81,26 @@
     <string name="material_timepicker_pm">pop.</string>
     <string name="material_timepicker_select_time">Izberite uro</string>
     <string name="material_timepicker_text_input_mode_description">Preklopite na način za vnašanje besedila, da vnesete čas.</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"Nazaj"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"Podnapisi so izklopljeni. Kliknite, če jih želite prikazati."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"Podnapisi so vklopljeni. Kliknite, če jih želite skriti."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"V redu"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"Pomik naprej za 30 sekund"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"Celozaslonsko"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"Neznan izvajalec"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"Neznan naslov skladbe"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"Naslednja predstavnostna vsebina"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"Neznan naslov videoposnetka"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"Nazaj na prejšnji seznam gumbov"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"Prikaži več gumbov"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"Začasno zaustavi"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"Predvajaj"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"Želene vsebine ni bilo mogoče predvajati"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"Prejšnja predstavnostna vsebina"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"Znova predvajaj"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"Pomik nazaj za 10 sekund"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"Potek predvajanja"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"Nastavitve"</string>
     <string name="mtrl_badge_numberless_content_description">Novo obvestilo</string>
     <string name="mtrl_chip_close_icon_content_description">Odstranite %1$s</string>
     <string name="mtrl_exceed_max_badge_number_content_description">Več kot toliko novih obvestil: %1$d</string>
@@ -105,6 +135,10 @@
     <string name="mtrl_picker_toggle_to_text_input_mode">Preklop na način vnosa besedila</string>
     <string name="mtrl_picker_toggle_to_year_selection">Dotik za preklop na izbiro leta</string>
     <string name="password_toggle_content_description">Prikaz gesla</string>
+    <string msgid="4221330012095125431" name="pause_button_content_description">"Začasna ustavitev"</string>
+    <string msgid="6034272287948142298" name="play_button_content_description">"Predvajanje"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Iskanje"</string>
+    <string msgid="17824442457643717" name="skip_to_next_item_button_content_description">"Preskok na naslednji element"</string>
+    <string msgid="7233771088610629683" name="skip_to_previous_item_button_content_description">"Preskok na prejšnji element"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

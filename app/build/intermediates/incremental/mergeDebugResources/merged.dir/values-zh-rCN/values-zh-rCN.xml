@@ -4,6 +4,15 @@
     <item quantity="one">%d 条新通知</item>
     <item quantity="other">%d 条新通知</item>
   </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"无"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"音轨 <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"音轨"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"常速"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"播放速度"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"关闭"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"字幕轨 <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> - <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"字幕轨 <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"转到首页"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"转到上一层级"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"更多选项"</string>
@@ -53,6 +62,7 @@
     <string name="common_open_on_phone">在手机上打开</string>
     <string name="common_signin_button_text">登录</string>
     <string name="common_signin_button_text_long">使用 Google 帐号登录</string>
+    <string msgid="6743534657295236036" name="default_notification_channel_name">"正在播放"</string>
     <string name="error_icon_content_description">错误</string>
     <string name="exposed_dropdown_menu_content_description">显示下拉菜单</string>
     <string name="icon_content_description">对话框图标</string>
@@ -69,6 +79,26 @@
     <string name="material_timepicker_pm">下午</string>
     <string name="material_timepicker_select_time">选择时间</string>
     <string name="material_timepicker_text_input_mode_description">切换到文字输入模式来输入时间。</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"返回"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"字幕已关闭。点击即可显示。"</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"字幕已开启。点击即可隐藏。"</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"确定"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"快进 30 秒"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"全屏"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"未知音乐人"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"未知歌曲名称"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"下一项媒体内容"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"未知视频名称"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"返回上一个按钮列表"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"查看更多按钮"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"暂停"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"播放"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"无法播放您请求的内容"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"上一项媒体内容"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"重放"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"快退 10 秒"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"播放进度"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"设置"</string>
     <string name="mtrl_badge_numberless_content_description">新通知</string>
     <string name="mtrl_chip_close_icon_content_description">移除%1$s</string>
     <string name="mtrl_exceed_max_badge_number_content_description">有 %1$d 条以上的新通知</string>
@@ -103,6 +133,10 @@
     <string name="mtrl_picker_toggle_to_text_input_mode">切换到文本字段输入模式</string>
     <string name="mtrl_picker_toggle_to_year_selection">点按即可切换到选择某年</string>
     <string name="password_toggle_content_description">显示密码</string>
+    <string msgid="4221330012095125431" name="pause_button_content_description">"暂停"</string>
+    <string msgid="6034272287948142298" name="play_button_content_description">"播放"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"搜索"</string>
+    <string msgid="17824442457643717" name="skip_to_next_item_button_content_description">"跳至下一项"</string>
+    <string msgid="7233771088610629683" name="skip_to_previous_item_button_content_description">"跳至上一项"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

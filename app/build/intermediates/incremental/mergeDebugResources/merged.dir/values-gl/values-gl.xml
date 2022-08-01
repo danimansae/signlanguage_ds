@@ -4,6 +4,15 @@
     <item quantity="one">%d notificación nova</item>
     <item quantity="other">%d notificacións novas</item>
   </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"Ningunha"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"Pista <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"Pista de audio"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"Normal"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"Velocidade de reprodución"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"Desconectar"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"Pista <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> (<ns1:g id="LANG">%2$s</ns1:g>)"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"Pista <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Vai ao inicio"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Vai cara arriba"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Máis opcións"</string>
@@ -53,6 +62,7 @@
     <string name="common_open_on_phone">Abrir no teléfono</string>
     <string name="common_signin_button_text">Iniciar sesión</string>
     <string name="common_signin_button_text_long">Iniciar sesión con Google</string>
+    <string msgid="6743534657295236036" name="default_notification_channel_name">"Reproducindo"</string>
     <string name="error_icon_content_description">Produciuse un erro</string>
     <string name="exposed_dropdown_menu_content_description">Mostra o menú despregable</string>
     <string name="icon_content_description">Icona de cadro de diálogo</string>
@@ -69,6 +79,26 @@
     <string name="material_timepicker_pm">p.m.</string>
     <string name="material_timepicker_select_time">Seleccionar hora</string>
     <string name="material_timepicker_text_input_mode_description">Cambia ao modo de introdución de texto para introducir a hora.</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"Atrás"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"Os subtítulos están desactivados. Fai clic para mostralos."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"Os subtítulos están activados. Fai clic para ocultalos."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"Aceptar"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"Avanza 30 segundos"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"Pantalla completa"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"Artista descoñecido"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"Título da canción descoñecido"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"Seguinte ficheiro multimedia"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"Título do vídeo: descoñecido"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"Volve á lista anterior de botóns"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"Mostra máis botóns"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"Pono en pausa"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"Reproduce o contido"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"Non se puido reproducir o elemento que solicitaches"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"Ficheiro multimedia anterior"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"Reproduce o contido de novo"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"Retrocede 10 segundos"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"Progreso da reprodución"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"Configuración"</string>
     <string name="mtrl_badge_numberless_content_description">Notificación nova</string>
     <string name="mtrl_chip_close_icon_content_description">Quita %1$s</string>
     <string name="mtrl_exceed_max_badge_number_content_description">Máis de %1$d notificacións novas</string>
@@ -103,6 +133,10 @@
     <string name="mtrl_picker_toggle_to_text_input_mode">Cambiar ao modo de introdución de texto</string>
     <string name="mtrl_picker_toggle_to_year_selection">Tocar para cambiar a selección de ano</string>
     <string name="password_toggle_content_description">Mostra o contrasinal</string>
+    <string msgid="4221330012095125431" name="pause_button_content_description">"Pon en pausa o contido"</string>
+    <string msgid="6034272287948142298" name="play_button_content_description">"Reproduce o contido"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Buscar"</string>
+    <string msgid="17824442457643717" name="skip_to_next_item_button_content_description">"Omite o elemento e vai ao seguinte"</string>
+    <string msgid="7233771088610629683" name="skip_to_previous_item_button_content_description">"Omite o elemento e vai ao anterior"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">">999"</string>
 </resources>

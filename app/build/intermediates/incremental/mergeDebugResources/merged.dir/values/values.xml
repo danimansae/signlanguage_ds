@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools" xmlns:ns2="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="MediaControlView_playback_speeds" translatable="false">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </string-array>
+    <integer-array name="media2_widget_speed_multiplied_by_100">
+        <item>25</item>
+        <item>50</item>
+        <item>75</item>
+        <item>100</item>
+        <item>125</item>
+        <item>150</item>
+        <item>200</item>
+    </integer-array>
     <attr format="enum" name="animateCircleAngleTo">
         <enum name="bestChoice" value="0"/>
         <enum name="closest" value="1"/>
@@ -570,6 +587,15 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
+    <color name="media2_widget_black_opacity_70">#B3000000</color>
+    <color name="media2_widget_bottom_bar_background">#b0000000</color>
+    <color name="media2_widget_center_view_background">#90000000</color>
+    <color name="media2_widget_gray">#808080</color>
+    <color name="media2_widget_music_view_default_background">#424242</color>
+    <color name="media2_widget_title_bar_gradient_end">#00000000</color>
+    <color name="media2_widget_title_bar_gradient_start">#d0000000</color>
+    <color name="media2_widget_white">#ffffff</color>
+    <color name="media2_widget_white_opacity_70">#B3ffffff</color>
     <color name="mtrl_btn_text_color_disabled">#61000000</color>
     <color name="mtrl_btn_transparent_bg_color">#00ffffff</color>
     <color name="mtrl_scrim_color">#52000000</color>
@@ -794,6 +820,34 @@
     <dimen name="material_time_picker_minimum_screen_height">560dp</dimen>
     <dimen name="material_time_picker_minimum_screen_width">340dp</dimen>
     <dimen name="material_timepicker_dialog_buttons_margin_top">24dp</dimen>
+    <dimen name="media2_widget_bottom_bar_height">48dp</dimen>
+    <dimen name="media2_widget_custom_progress_margin_bottom">43dp</dimen>
+    <dimen name="media2_widget_custom_progress_max_size">2dp</dimen>
+    <dimen name="media2_widget_custom_progress_thumb_size">12dp</dimen>
+    <dimen name="media2_widget_embedded_icon_padding">12dp</dimen>
+    <dimen name="media2_widget_embedded_settings_width">150dp</dimen>
+    <dimen name="media2_widget_full_icon_padding">10dp</dimen>
+    <dimen name="media2_widget_full_settings_width">225dp</dimen>
+    <dimen name="media2_widget_icon_margin">10dp</dimen>
+    <dimen name="media2_widget_icon_size">48dp</dimen>
+    <dimen name="media2_widget_music_view_artist_text_size">16sp</dimen>
+    <dimen name="media2_widget_music_view_full_image_size">200dp</dimen>
+    <dimen name="media2_widget_music_view_full_padding">52dp</dimen>
+    <dimen name="media2_widget_music_view_image_title_gap">24dp</dimen>
+    <dimen name="media2_widget_music_view_landscape_text_minimum_width">200dp</dimen>
+    <dimen name="media2_widget_music_view_title_text_size">20sp</dimen>
+    <dimen name="media2_widget_pause_icon_padding">6dp</dimen>
+    <dimen name="media2_widget_settings_height">48dp</dimen>
+    <dimen name="media2_widget_settings_icon_size">24dp</dimen>
+    <dimen name="media2_widget_settings_main_text_size">14sp</dimen>
+    <dimen name="media2_widget_settings_offset">8dp</dimen>
+    <dimen name="media2_widget_settings_sub_text_size">12sp</dimen>
+    <dimen name="media2_widget_settings_text_height">24dp</dimen>
+    <dimen name="media2_widget_subtitle_corner_radius">2dp</dimen>
+    <dimen name="media2_widget_subtitle_outline_width">2dp</dimen>
+    <dimen name="media2_widget_subtitle_shadow_offset">2dp</dimen>
+    <dimen name="media2_widget_subtitle_shadow_radius">2dp</dimen>
+    <dimen name="media2_widget_title_bar_height">48dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_bottom">80dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_end">24dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_start">24dp</dimen>
@@ -1004,10 +1058,6 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
-    <dimen name="subtitle_corner_radius">2dp</dimen>
-    <dimen name="subtitle_outline_width">2dp</dimen>
-    <dimen name="subtitle_shadow_offset">2dp</dimen>
-    <dimen name="subtitle_shadow_radius">2dp</dimen>
     <dimen name="test_mtrl_calendar_day_cornerSize">52dp</dimen>
     <dimen name="test_navigation_bar_active_item_max_width">168dp</dimen>
     <dimen name="test_navigation_bar_active_item_min_width">96dp</dimen>
@@ -1078,6 +1128,7 @@
     <item name="line3" type="id"/>
     <item name="material_clock_face" type="id"/>
     <item name="material_value_index" type="id"/>
+    <item name="media_controller_compat_view_tag" type="id"/>
     <item name="motion_base" type="id"/>
     <item name="mtrl_anchor_parent" type="id"/>
     <item name="mtrl_card_checked_layer_id" type="id"/>
@@ -1168,6 +1219,32 @@
     <item quantity="one"><ns2:g id="count">%d</ns2:g> new notification</item>
     <item quantity="other"><ns2:g id="count">%d</ns2:g> new notifications</item>
   </plurals>
+    <string name="MediaControlView_ad_remaining_time" translatable="false">
+        Ad · <ns2:g example="1:15" id="remaining_time">%1$s</ns2:g> remaining
+    </string>
+    <string name="MediaControlView_ad_skip_wait_time" translatable="false">
+        You can skip Ad in <ns2:g example="5" id="wait_time">%1$d</ns2:g>s
+    </string>
+    <string name="MediaControlView_ad_text" translatable="false">Visit Advertiser</string>
+    <string name="MediaControlView_audio_track_none_text">None</string>
+    <string name="MediaControlView_audio_track_number_text">
+        Track <ns2:g example="1" id="audio_number">%1$d</ns2:g>
+    </string>
+    <string name="MediaControlView_audio_track_text">Audio track</string>
+    <string name="MediaControlView_custom_playback_speed_text" translatable="false">
+        <ns2:g example="1.05" id="playback_speed">%1$.2f</ns2:g>x
+    </string>
+    <string name="MediaControlView_playback_speed_normal">Normal</string>
+    <string name="MediaControlView_playback_speed_text">Playback speed</string>
+    <string name="MediaControlView_subtitle_off_text">Off</string>
+    <string name="MediaControlView_subtitle_track_number_and_lang_text">
+        Track <ns2:g example="1" id="track_number">%1$d</ns2:g> - <ns2:g example="eng" id="lang">%2$s</ns2:g>
+    </string>
+    <string name="MediaControlView_subtitle_track_number_text">
+        Track <ns2:g example="1" id="track_number">%1$d</ns2:g>
+    </string>
+    <string name="MediaControlView_time_placeholder">00:00:00</string>
+    <string name="MediaControlView_video_quality_auto_text" translatable="false">Auto</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
@@ -1222,6 +1299,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="default_notification_channel_name">Now playing</string>
     <string name="default_web_client_id" translatable="false">864459952478-603bgto8ef6t6e936bj9kka29uektaje.apps.googleusercontent.com</string>
     <string name="error_icon_content_description">Error</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
@@ -1259,6 +1337,28 @@
     <string description="Suffix for time in 12-hour standard, after noon. [CHAR_LIMIT=2]" name="material_timepicker_pm">PM</string>
     <string description="Title for the dialog with a time picker. [CHAR_LIMIT=32]" name="material_timepicker_select_time">Select time</string>
     <string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
+    <string name="mcv2_back_button_desc">Back</string>
+    <string name="mcv2_cc_is_off">Subtitle is off. Click to show it.</string>
+    <string name="mcv2_cc_is_on">Subtitle is on. Click to hide it.</string>
+    <string name="mcv2_error_dialog_button">OK</string>
+    <string name="mcv2_ffwd_button_desc">Go forward by 30 seconds</string>
+    <string name="mcv2_full_screen_button_desc">Full screen</string>
+    <string name="mcv2_launch_button_desc" translatable="false">Launch Link</string>
+    <string name="mcv2_music_artist_unknown_text">Artist unknown</string>
+    <string name="mcv2_music_title_unknown_text">Song title unknown</string>
+    <string name="mcv2_next_button_desc">Next media</string>
+    <string name="mcv2_non_music_title_unknown_text">Video title unknown</string>
+    <string name="mcv2_overflow_left_button_desc">Back to previous button list</string>
+    <string name="mcv2_overflow_right_button_desc">See more buttons</string>
+    <string name="mcv2_pause_button_desc">Pause</string>
+    <string name="mcv2_play_button_desc">Play</string>
+    <string name="mcv2_playback_error_text">Couldn\'t play the item you requested</string>
+    <string name="mcv2_previous_button_desc">Previous media</string>
+    <string name="mcv2_replay_button_desc">Replay</string>
+    <string name="mcv2_rewind_button_desc">Rewind by 10 seconds</string>
+    <string name="mcv2_seek_bar_desc">Playback progress</string>
+    <string name="mcv2_settings_button_desc">Settings</string>
+    <string name="mcv2_video_quality_button_desc" translatable="false">Video Quality Selection</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string description="Content description for a close icon that lets the user remove content from the screen" name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
     <string description="Plural form content description for when the number of new notifications exceeds a maximum count[CHAR_LIMIT=NONE]" name="mtrl_exceed_max_badge_number_content_description" ns1:ignore="PluralsCandidate">More than <ns2:g example="999" id="maximum number">%1$d</ns2:g> new notifications</string>
@@ -1299,9 +1399,13 @@
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
+    <string name="pause_button_content_description">Pause</string>
+    <string name="play_button_content_description">Play</string>
     <string name="project_id" translatable="false">dukkebi-981f7</string>
     <string name="search_menu_title">Search</string>
     <string name="select_image_for_text_recognition">Select image for text recognition</string>
+    <string name="skip_to_next_item_button_content_description">Skip to next item</string>
+    <string name="skip_to_previous_item_button_content_description">Skip to previous item</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -3384,6 +3488,158 @@
     <item name="android:layout_gravity">center</item>
     <item name="android:textAlignment" ns1:ignore="NewApi">center</item>
   </style>
+    <style name="Media2_Widget_BottomBarButton">
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">@dimen/media2_widget_embedded_icon_padding</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="Media2_Widget_BottomBarButton.CC">
+        <item name="android:src">@drawable/media2_widget_ic_subtitle_off</item>
+        <item name="android:contentDescription">@string/mcv2_cc_is_off</item>
+    </style>
+    <style name="Media2_Widget_BottomBarButton.FullScreen">
+        <item name="android:src">@drawable/media2_widget_ic_fullscreen</item>
+        <item name="android:contentDescription">@string/mcv2_full_screen_button_desc</item>
+    </style>
+    <style name="Media2_Widget_BottomBarButton.OverflowHide">
+        <item name="android:src">@drawable/media2_widget_ic_chevron_left</item>
+        <item name="android:contentDescription">@string/mcv2_overflow_left_button_desc</item>
+    </style>
+    <style name="Media2_Widget_BottomBarButton.OverflowShow">
+        <item name="android:src">@drawable/media2_widget_ic_chevron_right</item>
+        <item name="android:contentDescription">@string/mcv2_overflow_right_button_desc</item>
+    </style>
+    <style name="Media2_Widget_BottomBarButton.Settings">
+        <item name="android:src">@drawable/media2_widget_ic_settings</item>
+        <item name="android:contentDescription">@string/mcv2_settings_button_desc</item>
+    </style>
+    <style name="Media2_Widget_EmbeddedTransportControlsButton">
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="Media2_Widget_EmbeddedTransportControlsButton.Ffwd">
+        <item name="android:src">@drawable/media2_widget_ic_forward_30</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:contentDescription">@string/mcv2_ffwd_button_desc</item>
+        <item name="android:padding">@dimen/media2_widget_embedded_icon_padding</item>
+    </style>
+    <style name="Media2_Widget_EmbeddedTransportControlsButton.Next">
+        <item name="android:src">@drawable/media2_widget_ic_skip_next</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:contentDescription">@string/mcv2_next_button_desc</item>
+        <item name="android:padding">@dimen/media2_widget_embedded_icon_padding</item>
+    </style>
+    <style name="Media2_Widget_EmbeddedTransportControlsButton.Pause">
+        <item name="android:src">@drawable/media2_widget_ic_pause_circle_filled</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:contentDescription">@string/mcv2_pause_button_desc</item>
+        <item name="android:padding">@dimen/media2_widget_pause_icon_padding</item>
+    </style>
+    <style name="Media2_Widget_EmbeddedTransportControlsButton.Previous">
+        <item name="android:src">@drawable/media2_widget_ic_skip_previous</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:contentDescription">@string/mcv2_previous_button_desc</item>
+        <item name="android:padding">@dimen/media2_widget_embedded_icon_padding</item>
+    </style>
+    <style name="Media2_Widget_EmbeddedTransportControlsButton.Rew">
+        <item name="android:src">@drawable/media2_widget_ic_rewind_10</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:contentDescription">@string/mcv2_rewind_button_desc</item>
+        <item name="android:padding">@dimen/media2_widget_embedded_icon_padding</item>
+    </style>
+    <style name="Media2_Widget_FullTransportControlsButton">
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="Media2_Widget_FullTransportControlsButton.Ffwd">
+        <item name="android:src">@drawable/media2_widget_ic_forward_30</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:contentDescription">@string/mcv2_ffwd_button_desc</item>
+        <item name="android:padding">@dimen/media2_widget_full_icon_padding</item>
+    </style>
+    <style name="Media2_Widget_FullTransportControlsButton.Next">
+        <item name="android:src">@drawable/media2_widget_ic_skip_next</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:contentDescription">@string/mcv2_next_button_desc</item>
+        <item name="android:padding">@dimen/media2_widget_full_icon_padding</item>
+    </style>
+    <style name="Media2_Widget_FullTransportControlsButton.Pause">
+        <item name="android:src">@drawable/media2_widget_ic_pause_circle_filled</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:contentDescription">@string/mcv2_pause_button_desc</item>
+        <item name="android:padding">@dimen/media2_widget_pause_icon_padding</item>
+    </style>
+    <style name="Media2_Widget_FullTransportControlsButton.Previous">
+        <item name="android:src">@drawable/media2_widget_ic_skip_previous</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:contentDescription">@string/mcv2_previous_button_desc</item>
+        <item name="android:padding">@dimen/media2_widget_full_icon_padding</item>
+    </style>
+    <style name="Media2_Widget_FullTransportControlsButton.Rew">
+        <item name="android:src">@drawable/media2_widget_ic_rewind_10</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:contentDescription">@string/mcv2_rewind_button_desc</item>
+        <item name="android:padding">@dimen/media2_widget_full_icon_padding</item>
+    </style>
+    <style name="Media2_Widget_MinimalTransportControlsButton">
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:padding">@dimen/media2_widget_pause_icon_padding</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/media2_widget_ic_pause_circle_filled</item>
+        <item name="android:contentDescription">@string/mcv2_pause_button_desc</item>
+    </style>
+    <style name="Media2_Widget_TimeText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="Media2_Widget_TimeText.Current">
+        <item name="android:textColor">@color/media2_widget_white</item>
+        <item name="android:text">@string/MediaControlView_time_placeholder</item>
+    </style>
+    <style name="Media2_Widget_TimeText.End">
+        <item name="android:textColor">@color/media2_widget_white_opacity_70</item>
+        <item name="android:text">@string/MediaControlView_time_placeholder</item>
+    </style>
+    <style name="Media2_Widget_TimeText.Interpunct">
+        <item name="android:textColor">@color/media2_widget_white_opacity_70</item>
+        <item name="android:text">·</item>
+    </style>
+    <style name="Media2_Widget_TitleBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/media2_widget_title_bar_height</item>
+    </style>
+    <style name="Media2_Widget_TitleBarButton">
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">@dimen/media2_widget_icon_size</item>
+        <item name="android:layout_height">@dimen/media2_widget_icon_size</item>
+        <item name="android:padding">@dimen/media2_widget_embedded_icon_padding</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="Media2_Widget_TitleBarButton.Launch">
+        <item name="android:src">@drawable/media2_widget_ic_launch</item>
+        <item name="android:contentDescription">@string/mcv2_launch_button_desc</item>
+    </style>
     <style name="Platform.AppCompat" parent="android:Theme.Holo">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
@@ -9492,6 +9748,15 @@
         <attr format="dimension" name="region_heightLessThan"/>
         <attr format="dimension" name="region_heightMoreThan"/>
         <attr name="constraints"/>
+    </declare-styleable>
+    <declare-styleable name="VideoView">
+        <!-- Default : true -->
+        <attr format="boolean" name="enableControlView"/>
+        <!-- To choose underlying view type to render a video. Default : surfaceView -->
+        <attr format="enum" name="viewType">
+            <enum name="surfaceView" value="0"/>
+            <enum name="textureView" value="1"/>
+        </attr>
     </declare-styleable>
     <declare-styleable name="View">
         <!-- Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}. -->

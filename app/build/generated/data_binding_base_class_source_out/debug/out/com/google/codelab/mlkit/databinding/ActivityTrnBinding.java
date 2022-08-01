@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.VideoView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,9 +23,14 @@ public final class ActivityTrnBinding implements ViewBinding {
   @NonNull
   public final TextView textTrn;
 
-  private ActivityTrnBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textTrn) {
+  @NonNull
+  public final VideoView videoView;
+
+  private ActivityTrnBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textTrn,
+      @NonNull VideoView videoView) {
     this.rootView = rootView;
     this.textTrn = textTrn;
+    this.videoView = videoView;
   }
 
   @Override
@@ -60,7 +66,13 @@ public final class ActivityTrnBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityTrnBinding((ConstraintLayout) rootView, textTrn);
+      id = R.id.videoView;
+      VideoView videoView = ViewBindings.findChildViewById(rootView, id);
+      if (videoView == null) {
+        break missingId;
+      }
+
+      return new ActivityTrnBinding((ConstraintLayout) rootView, textTrn, videoView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

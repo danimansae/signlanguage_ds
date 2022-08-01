@@ -4,6 +4,15 @@
     <item quantity="one">%d ny avisering</item>
     <item quantity="other">%d nya aviseringar</item>
   </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"Inget"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"Spår <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"Ljudspår"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"Normal"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"Uppspelningshastighet"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"Av"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"Spår <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> – <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"Spår <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
     <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Navigera hem"</string>
     <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Navigera uppåt"</string>
     <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Fler alternativ"</string>
@@ -53,6 +62,7 @@
     <string name="common_open_on_phone">Öppna på mobilen</string>
     <string name="common_signin_button_text">Logga in</string>
     <string name="common_signin_button_text_long">Logga in med Google</string>
+    <string msgid="6743534657295236036" name="default_notification_channel_name">"Nu spelas"</string>
     <string name="error_icon_content_description">Fel</string>
     <string name="exposed_dropdown_menu_content_description">Visa rullgardinsmenyn</string>
     <string name="icon_content_description">Dialogikon</string>
@@ -69,6 +79,26 @@
     <string name="material_timepicker_pm">EM</string>
     <string name="material_timepicker_select_time">Välj tid</string>
     <string name="material_timepicker_text_input_mode_description">Byt till textinmatningsläget och ange tid.</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"Tillbaka"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"Undertexter har inaktiverats. Klicka för att visa dem."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"Undertexter har aktiverats. Klicka för att dölja dem."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"OK"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"Spola framåt 30 sekunder"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"Helskärm"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"Okänd artist"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"Okänd låttitel"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"Nästa media"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"Okänd videotitel"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"Tillbaka till föregående knapplista"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"Visa fler knappar"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"Pausa"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"Spela upp"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"Det gick inte att spela upp det valda objektet"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"Föregående media"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"Spela upp igen"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"Spola bakåt tio sekunder"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"Uppspelningsförlopp"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"Inställningar"</string>
     <string name="mtrl_badge_numberless_content_description">Ny avisering</string>
     <string name="mtrl_chip_close_icon_content_description">Ta bort (%1$s)</string>
     <string name="mtrl_exceed_max_badge_number_content_description">Fler än %1$d nya aviseringar</string>
@@ -103,6 +133,10 @@
     <string name="mtrl_picker_toggle_to_text_input_mode">Byt till text som inmatningsläge</string>
     <string name="mtrl_picker_toggle_to_year_selection">Byt till att välja ett år genom att trycka</string>
     <string name="password_toggle_content_description">Visa lösenord</string>
+    <string msgid="4221330012095125431" name="pause_button_content_description">"Pausa"</string>
+    <string msgid="6034272287948142298" name="play_button_content_description">"Spela upp"</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Sök"</string>
+    <string msgid="17824442457643717" name="skip_to_next_item_button_content_description">"Hoppa till nästa objekt"</string>
+    <string msgid="7233771088610629683" name="skip_to_previous_item_button_content_description">"Hoppa till föregående objekt"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

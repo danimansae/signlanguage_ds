@@ -24,6 +24,7 @@ com/google/codelab/mlkit/MainActivity.java
 com/google/codelab/mlkit/Translation.java
  com.google.codelab.mlkit.Translation
  com.google.codelab.mlkit.Translation$1
+ com.google.codelab.mlkit.Translation$2
  com.google.codelab.mlkit.Translation$Morpheme
  com.google.codelab.mlkit.Translation$Morphemecomparator
  com.google.codelab.mlkit.Translation$NameEntity
