@@ -59,7 +59,13 @@
         </activity>
         <activity
             android:name="com.google.codelab.mlkit.Translation"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <activity
+            android:name="com.google.codelab.mlkit.Video"
+            android:exported="true"
+            android:parentActivityName="com.google.codelab.mlkit.MainActivity" >
         </activity>
 
         <service

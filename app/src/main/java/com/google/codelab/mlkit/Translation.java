@@ -1,44 +1,25 @@
 package com.google.codelab.mlkit;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.VideoView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.codelab.mlkit.R;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageMetadata;
-import com.google.firebase.storage.StorageReference;
 import com.google.gson.Gson;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -46,7 +27,8 @@ import java.util.List;
 import java.util.Map;
 
 
-public class Translation extends AppCompatActivity {
+public class Translation extends Activity {
+
     static public class Morpheme {
         final String text;
         final String type;
@@ -100,13 +82,6 @@ public class Translation extends AppCompatActivity {
     static List<Morpheme> morphemes = null;
     static String pre_text = "";
 
-    // Viedo 관련
-    private FirebaseStorage storage;
-    private static String video_url = "";
-    private ArrayList<String> array = new ArrayList<String>();
-    private int count;
-    String filePath = "";
-
     @Override
     @RequiresApi(api = Build.VERSION_CODES.N)
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,63 +94,6 @@ public class Translation extends AppCompatActivity {
         String analysisCode = "wsd";   // 언어 분석 코드
         String text = "";           // 분석할 텍스트 데이터
         Gson gson = new Gson();
-
-        TextView text_trn = findViewById(R.id.text_trn);
-        VideoView videoView = findViewById(R.id.videoView);
-
-
-        // ** videoView
-
-        // 생성된 FirebaseStorage를 참조하는 storage 생성
-        String fileName = "디플레이션.mp4"; // intent로 실제 사용되는 형태소 받아오기
-
-        // Encoding...
-        try {
-            fileName = URLEncoder.encode(fileName, "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-
-        video_url = "https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/"+ fileName + "?alt=media";
-
-        // Storage 내부의 수어 영상 파일명을 가리키는 참조 생성
-        Uri uri = Uri.parse(video_url);
-        videoView.setVideoURI(uri);
-        videoView.start();
-
-        if (!(videoView.isPlaying())) {
-            uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/\"+ fileName + \"?alt=media");
-            videoView.setVideoURI(uri);
-            videoView.start();
-        }
-
-        // array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/바이러스.mp4?alt=media");
-        // array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%94%94%ED%94%8C%EB%A0%88%EC%9D%B4%EC%85%98.mp4?alt=media&token=72fc1dae-4c8a-43b0-9f30-c205d5139b8e");
-        count = 0;
-
-        MediaController mediaController = new MediaController(this);
-        mediaController.setAnchorView(videoView);
-
-        Uri video = Uri.parse(video_url);
-        // videoView.setMediaController(mediaController); 재생바
-        videoView.setVideoURI(video);
-        videoView.requestFocus();
-
-        MediaPlayer.OnCompletionListener mCompelete = new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mediaPlayer) {
-                // 재생할 비디오가 남아있을 경우
-                if (array.size() > count) {
-                    Uri video1 = Uri.parse(array.get(count).toString());
-                    count++;
-                    videoView.setVideoURI(video1);
-                    videoView.start();
-                }
-            }
-        };
-
-        videoView.setOnCompletionListener(mCompelete);
-        videoView.start();
 
         Intent intent = getIntent();
 
@@ -346,8 +264,10 @@ public class Translation extends AppCompatActivity {
         }
 
         // 작업 테스트
-        text_trn.setText("결과값 : " + "\n" + output);
-
+        Intent intent2 = new Intent(getApplicationContext(), Video.class);
+        intent2.putExtra("out_put", "결과값 : " + "\n" + output);
+        startActivity(intent2);
+        finish();
     }
 
 
@@ -369,6 +289,7 @@ public class Translation extends AppCompatActivity {
             output += text + " ";
         }
 
+        /*
         output = "실습실 주의 사항\n" +
                 "1 USB 바이러스 감염 주의\n" +
                 "(USB 사용 시 포맷 고 사용하 바라)\n" +
@@ -398,7 +319,6 @@ public class Translation extends AppCompatActivity {
         output = "";
         finish();   //현재 액티비티 종료
     }
-
           /*
            JSONObject jsonObject = new JSONObject(json);
            JSONArray Array = jsonObject.getJSONArray("sentence").getJSONArray("WSD");
@@ -424,7 +344,5 @@ public class Translation extends AppCompatActivity {
             }
 
            */
-
-
 
 };

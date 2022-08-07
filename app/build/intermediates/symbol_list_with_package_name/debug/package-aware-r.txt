@@ -2398,10 +2398,10 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
-id text_trn
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2439,7 +2439,6 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
-id videoView
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -2527,6 +2526,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_trn
+layout activity_video
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3253,6 +3253,7 @@ style Theme_AppCompat_Light_Dialog_MinWidth
 style Theme_AppCompat_Light_DialogWhenLarge
 style Theme_AppCompat_Light_NoActionBar
 style Theme_AppCompat_NoActionBar
+style Theme_AppCompat_Transparent
 style Theme_Design
 style Theme_Design_BottomSheetDialog
 style Theme_Design_Light

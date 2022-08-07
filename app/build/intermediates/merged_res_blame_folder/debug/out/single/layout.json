@@ -4,6 +4,10 @@
         "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_trn.xml"
     },
     {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_video.xml",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_video.xml"
+    },
+    {
         "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_main.xml"
     }

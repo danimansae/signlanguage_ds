@@ -2397,10 +2397,10 @@ int id textSpacerNoButtons 0x7f0901d2
 int id textSpacerNoTitle 0x7f0901d3
 int id textStart 0x7f0901d4
 int id textTop 0x7f0901d5
+int id textView 0x7f090211
 int id text_input_end_icon 0x7f0901d6
 int id text_input_error_icon 0x7f0901d7
 int id text_input_start_icon 0x7f0901d8
-int id text_trn 0x7f0901d9
 int id textinput_counter 0x7f0901da
 int id textinput_error 0x7f0901db
 int id textinput_helper_text 0x7f0901dc
@@ -2438,7 +2438,6 @@ int id unlabeled 0x7f0901fb
 int id up 0x7f0901fc
 int id useLogo 0x7f0901fd
 int id vertical_only 0x7f0901fe
-int id videoView 0x7f0901ff
 int id view_offset_helper 0x7f090200
 int id view_transition 0x7f090201
 int id view_tree_lifecycle_owner 0x7f090202
@@ -2526,6 +2525,7 @@ int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_main 0x7f0c001c
 int layout activity_trn 0x7f0c001d
+int layout activity_video 0x7f0c0085
 int layout custom_dialog 0x7f0c001e
 int layout design_bottom_navigation_item 0x7f0c001f
 int layout design_bottom_sheet_dialog 0x7f0c0020
@@ -3252,6 +3252,7 @@ int style Theme_AppCompat_Light_Dialog_MinWidth 0x7f1101b7
 int style Theme_AppCompat_Light_DialogWhenLarge 0x7f1101b8
 int style Theme_AppCompat_Light_NoActionBar 0x7f1101b9
 int style Theme_AppCompat_NoActionBar 0x7f1101ba
+int style Theme_AppCompat_Transparent 0x7f1102f2
 int style Theme_Design 0x7f1101bb
 int style Theme_Design_BottomSheetDialog 0x7f1101bc
 int style Theme_Design_Light 0x7f1101bd
