@@ -55,7 +55,6 @@ public class Video extends AppCompatActivity
 
         textList = findViewById(R.id.textList);
         textView = findViewById (R.id.textView);
-        WebView webView = findViewById(R.id.webView);
 
         textArray  = new ArrayList<>();
 
