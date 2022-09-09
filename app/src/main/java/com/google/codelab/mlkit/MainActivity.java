@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     SimpleDateFormat imageDate = new SimpleDateFormat("yyyyMMdd_HHmmss");
     String imagePath;
 
-
     /**
      * Number of results to show in the UI.
      */
@@ -267,7 +266,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             return;
         }
 
-        String str1=texts.getText();
+        String str1 = texts.getText();
         out_text = str1;
         tView.setText(str1);
 
@@ -385,5 +384,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
 
         return bitmap;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();   //현재 액티비티 종료
     }
 }

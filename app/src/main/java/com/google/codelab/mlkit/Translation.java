@@ -20,6 +20,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -78,9 +79,11 @@ public class Translation extends Activity {
     }
 
     // 최종 결과값 확인
-    static public String output = "";
+    static String output = "";
+    static String original = "";
     static List<Morpheme> morphemes = null;
     static String pre_text = "";
+    static ArrayList<String> textArray;
 
     @Override
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -95,10 +98,12 @@ public class Translation extends Activity {
         String text = "";           // 분석할 텍스트 데이터
         Gson gson = new Gson();
 
-        Intent intent = getIntent();
+        textArray  = new ArrayList<>();
 
+        Intent intent = getIntent();
         // 언어 분석 기술(문어)
         pre_text = intent.getStringExtra("out_text");
+        original = pre_text;
         text = pre_text;
 
         /*
@@ -203,7 +208,7 @@ public class Translation extends Activity {
                                     }
 
                                     // 번역 알고리즘 적용
-                                    translate((String) morphemeInfo.get("type"),(String) morphemeInfo.get("text"));
+                                    translate((String) morphemeInfo.get("type"),(String) morphemeInfo.get("text") + " ");
                                 }
 
 
@@ -265,18 +270,18 @@ public class Translation extends Activity {
 
         // 작업 테스트
         Intent intent2 = new Intent(getApplicationContext(), Video.class);
-        intent2.putExtra("out_put", "결과값 : " + "\n" + output);
+        intent2.putStringArrayListExtra("textArray", textArray); // 형태소 분석 결과 띄어쓰기 단어로 저장함
+        // intent2.putExtra("out_put", "결과값 : " + "\n" + output);
+        intent2.putExtra("original", original); // 수어 번역 적용 안 된 원래 문장
         startActivity(intent2);
+        original = "";
         finish();
     }
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public static void translate (String type, String text) {
-        String t_text = ""; // 최종 번역된 문장
-
-        // 줄바꿈 -> 띄어쓰기로 변환
-        text.replace("\n", " ");
+        text.replace("\n", " "); // 줄바꿈 -> 띄어쓰기로 변환
 
         // 1. 수화 표현을 위한 문장 요소 제거
         // 동사 파생 접미사(XSV), 선어말 어미(EP), 명사형 전성 어미, 종결 어미 등 제거
@@ -286,7 +291,9 @@ public class Translation extends Activity {
 
         } else if (!(type.equals("XSV") || type.equals("EP") || type.equals("ETN") || type.equals("EF") || type.equals("SF")
                 || type.equals("SS") || type.equals("EP") || type.equals("JKO"))) {
-            output += text + " ";
+            output += text;
+            textArray.add(output);
+            output += " ";
         }
 
         /*
