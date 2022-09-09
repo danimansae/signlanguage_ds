@@ -283,6 +283,7 @@ public class Translation extends Activity {
     public static void translate (String type, String text) {
         text.replace("\n", " "); // 줄바꿈 -> 띄어쓰기로 변환
 
+        
         // 1. 수화 표현을 위한 문장 요소 제거
         // 동사 파생 접미사(XSV), 선어말 어미(EP), 명사형 전성 어미, 종결 어미 등 제거
 

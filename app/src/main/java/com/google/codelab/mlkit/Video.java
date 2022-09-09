@@ -55,7 +55,6 @@ public class Video extends AppCompatActivity
 
         textList = findViewById(R.id.textList);
         textView = findViewById (R.id.textView);
-
         textArray  = new ArrayList<>();
 
         String fileName = "";
@@ -82,7 +81,7 @@ public class Video extends AppCompatActivity
             }
         });
 
-        // output 띄어쓰기를 기준으로 리스트로 하나씩 받아오기...ing
+        // output 띄어쓰기를 기준으로 리스트로 하나씩 받아오기..ing
 
         fileName = textArray.get(0); // 형태소 단위로 수어 영상 매칭 준비
 

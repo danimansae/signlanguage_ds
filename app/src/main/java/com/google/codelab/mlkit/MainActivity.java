@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private ImageView mImageView;
     private TextView tView;
     private Button mTextButton;
-    private Bitmap mSelectedImage;
+    private Bitmap mSelectedImage; 
     private Button mPhotoButton;
     private Button mCameraButton;
     private Button mTrnButton;
