@@ -1,67 +1,195 @@
 [
     {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\font_nanum.ttf.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\font\\nanum.ttf"
     },
     {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_favorite_24.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_24.xml"
     },
     {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_bluesolid_button.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\bluesolid_button.xml"
     },
     {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_setting.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_setting.xml"
     },
     {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\font_nanum2.ttf.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\font\\nanum2.ttf"
     },
     {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_trn.xml.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_trn.xml"
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_menu_24.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\ic_baseline_menu_24.xml"
     },
     {
         "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\raw_dogseong.mp4.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\raw\\dogseong.mp4"
     },
     {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_favorite.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_favorite.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_title.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_title.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\raw_memory.mp4.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\raw\\memory.mp4"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\raw_seong.mp4.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\raw\\seong.mp4"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_back_hand_24.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\ic_baseline_back_hand_24.xml"
     },
     {
         "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_video.xml.flat",
         "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_video.xml"
     },
     {
-        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_navi.gif.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\navi.gif"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\font_nanumbold.ttf.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\font\\nanumbold.ttf"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\layout_maintoolbar.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\maintoolbar.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\layout_favotitetoolbar.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\favotitetoolbar.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_duksae01a.png.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\duksae01a.png"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_mmain.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_mmain.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\xml_network_security_config.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\xml\\network_security_config.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_menu_book_24.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\ic_baseline_menu_book_24.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_search_24.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_solid_button.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\solid_button.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\menu_menu.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_green_button.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\green_button.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_son_mal.jpg.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\son_mal.jpg"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\raw_geubseong.mp4.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\raw\\geubseong.mp4"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\raw_sanhwa.mp4.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\raw\\sanhwa.mp4"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_fav.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\menu\\menu_fav.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_settings_24.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\ic_baseline_settings_24.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\font_app_font.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\font\\app_font.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_trn.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_trn.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_bbsolid_button.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\bbsolid_button.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_keyboard_voice_24.xml.flat",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\drawable\\ic_baseline_keyboard_voice_24.xml"
     },
     {
         "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",

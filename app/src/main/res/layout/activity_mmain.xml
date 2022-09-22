@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mMainActivity"
+    android:id="@+id/drawer_layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+            style="@style/Text.TitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+            android:textStyle="bold"
+        android:text="손말"
+        android:textColor="#92BCE4"
+        android:textSize="30dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/sttResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="음성인식 결과가 여기에 표시됩니다." />
+            <ImageButton
+                android:layout_marginLeft="30dp"
+                android:id="@+id/sttStart"
+                android:textColor="#F5F5EE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_keyboard_voice_24"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/stt_trn"
+                android:src="@drawable/ic_baseline_back_hand_24"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="수어 통역이 필요한 이미지를 \n 가져와 보세요."
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"/>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    >
+
+    <Button
+        android:background="@drawable/solid_button"
+        android:id="@+id/button_camera"
+        android:layout_width="170dp"
+        android:layout_height="300dp"
+        android:text="카메라"
+        android:textSize="10pt"/>
+
+    <Button
+        android:background="@drawable/bbsolid_button"
+        android:id="@+id/button_gallery"
+        android:layout_marginLeft="20dp"
+        android:layout_width="170dp"
+        android:layout_height="300dp"
+        android:text="갤러리"
+        android:textSize="10pt"/>
+</LinearLayout>
+</LinearLayout>
+
+</LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navi_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/menu"/>
+</androidx.drawerlayout.widget.DrawerLayout>

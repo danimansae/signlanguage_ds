@@ -4,20 +4,33 @@ package com.google.codelab.mlkit.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.VideoView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.google.codelab.mlkit.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityTrnBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  private ActivityTrnBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final TextView textTrn;
+
+  @NonNull
+  public final VideoView videoView;
+
+  private ActivityTrnBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textTrn,
+      @NonNull VideoView videoView) {
     this.rootView = rootView;
+    this.textTrn = textTrn;
+    this.videoView = videoView;
   }
 
   @Override
@@ -43,10 +56,25 @@ public final class ActivityTrnBinding implements ViewBinding {
 
   @NonNull
   public static ActivityTrnBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.text_trn;
+      TextView textTrn = ViewBindings.findChildViewById(rootView, id);
+      if (textTrn == null) {
+        break missingId;
+      }
 
-    return new ActivityTrnBinding((ConstraintLayout) rootView);
+      id = R.id.videoView;
+      VideoView videoView = ViewBindings.findChildViewById(rootView, id);
+      if (videoView == null) {
+        break missingId;
+      }
+
+      return new ActivityTrnBinding((ConstraintLayout) rootView, textTrn, videoView);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

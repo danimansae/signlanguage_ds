@@ -7,6 +7,10 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Spannable;
+import android.text.Spanned;
+import android.text.style.BackgroundColorSpan;
+import android.text.style.ForegroundColorSpan;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -17,6 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -47,6 +52,9 @@ public class Video extends AppCompatActivity
     LinearLayout textList;
     TextView textView;
     ArrayList<String> textArray;
+    Spannable span;
+    String fileName = "";
+    String videoId = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,20 +65,21 @@ public class Video extends AppCompatActivity
         textView = findViewById (R.id.textView);
         textArray  = new ArrayList<>();
 
-        String fileName = "";
-
         // 번역된 최종 문장 표시
         Intent intent = getIntent();
         // String output = intent.getStringExtra("out_put");
         textArray = intent.getStringArrayListExtra("textArray");
         String original = intent.getStringExtra("original");
 
-        // textView.setText(original);
+        // textView.textView.setText(original);
 
         for (int i = 0 ; i < textArray.size() ; i++) {
             textView.setText(textArray.get(i)); // 띄어쓰기 단위로 나눈 번역된 문장 화면에 표시
             // fileName = textArray.get(i); // intent로 실제 사용되는 형태소 받아오기
         }
+
+        // span = (Spannable) textView.getText();
+        // span.setSpan(new BackgroundColorSpan(0xff008299), 0, textView.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         // pathReference.get
 
@@ -100,10 +109,30 @@ public class Video extends AppCompatActivity
         surfaceHolder = surfaceView.getHolder();
         surfaceHolder.addCallback(this);
 
-        uri = Uri.parse("http://videocdn.bodybuilding.com/video/mp4/62000/62792m.mp4");
+        /*
+        for (int i = 0 ; i < textArray.size() ; i++) {
+            if (textArray.get(i).equals("급성 ")) {
+                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + "2131689474");
+                array.add("android.resource://" + getPackageName()+ "/" + "2131689473");
+            } else if (textArray.get(i).equals("산화 ")) {
+                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + "2131689475");
+                array.add("android.resource://" + getPackageName()+ "/" + "2131689476");
+            } else if (textArray.get(i).equals("")) {
+            }
+        }
 
-        array.add("http://videocdn.bodybuilding.com/video/mp4/62000/62792m.mp4");
-        array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/videos%2F%EB%8F%85%EC%84%B1.mp4?alt=media&token=612ac079-f84c-49d7-8f64-e8d5b8daf56a");
+         */
+
+        /*
+        uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/geubseong.mp4?alt=media");
+        array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/dogseong.mp4?alt=media");
+        array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/sanhwa.mp4?alt=media");
+        array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/seong.mp4?alt=media");
+        */
+
+        uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.memory);
+        // array.add("android.resource://" + getPackageName()+ "/" + videoId);
+
         count = 0;
     }
 
@@ -153,9 +182,17 @@ public class Video extends AppCompatActivity
             if (array.size() > count) {
                 try {
                     reset();
-                    mp.setDataSource(array.get(count));
+                    // mp.setDataSource(array.get(count));
+                    mp.setDataSource(getApplicationContext(), Uri.parse(array.get(count)));
+
+                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mediaPlayer) {
+                            start();
+                        }
+                    });
+
                     mp.prepare(); // 계속 오류 뜸
-                    start();
                     count++;
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -260,6 +297,7 @@ public class Video extends AppCompatActivity
     @Override
     public void onBackPressed() {
         textView.setText("");
+        mediaPlayer.release();
         finish();
     }
 }

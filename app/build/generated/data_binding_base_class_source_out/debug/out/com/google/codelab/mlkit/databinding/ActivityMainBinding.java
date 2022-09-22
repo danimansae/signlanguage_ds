@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.codelab.mlkit.GraphicOverlay;
@@ -20,13 +20,10 @@ import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final DrawerLayout rootView;
 
   @NonNull
-  public final Button buttonCamera;
-
-  @NonNull
-  public final Button buttonGallery;
+  public final Button buttonReget;
 
   @NonNull
   public final Button buttonText;
@@ -41,24 +38,27 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ImageView imageView;
 
   @NonNull
+  public final DrawerLayout mainActivity;
+
+  @NonNull
   public final TextView tv;
 
-  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button buttonCamera,
-      @NonNull Button buttonGallery, @NonNull Button buttonText, @NonNull Button buttonTrn,
-      @NonNull GraphicOverlay graphicOverlay, @NonNull ImageView imageView, @NonNull TextView tv) {
+  private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull Button buttonReget,
+      @NonNull Button buttonText, @NonNull Button buttonTrn, @NonNull GraphicOverlay graphicOverlay,
+      @NonNull ImageView imageView, @NonNull DrawerLayout mainActivity, @NonNull TextView tv) {
     this.rootView = rootView;
-    this.buttonCamera = buttonCamera;
-    this.buttonGallery = buttonGallery;
+    this.buttonReget = buttonReget;
     this.buttonText = buttonText;
     this.buttonTrn = buttonTrn;
     this.graphicOverlay = graphicOverlay;
     this.imageView = imageView;
+    this.mainActivity = mainActivity;
     this.tv = tv;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public DrawerLayout getRoot() {
     return rootView;
   }
 
@@ -83,15 +83,9 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button_camera;
-      Button buttonCamera = ViewBindings.findChildViewById(rootView, id);
-      if (buttonCamera == null) {
-        break missingId;
-      }
-
-      id = R.id.button_gallery;
-      Button buttonGallery = ViewBindings.findChildViewById(rootView, id);
-      if (buttonGallery == null) {
+      id = R.id.button_reget;
+      Button buttonReget = ViewBindings.findChildViewById(rootView, id);
+      if (buttonReget == null) {
         break missingId;
       }
 
@@ -119,14 +113,16 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      DrawerLayout mainActivity = (DrawerLayout) rootView;
+
       id = R.id.tv;
       TextView tv = ViewBindings.findChildViewById(rootView, id);
       if (tv == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, buttonCamera, buttonGallery,
-          buttonText, buttonTrn, graphicOverlay, imageView, tv);
+      return new ActivityMainBinding((DrawerLayout) rootView, buttonReget, buttonText, buttonTrn,
+          graphicOverlay, imageView, mainActivity, tv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

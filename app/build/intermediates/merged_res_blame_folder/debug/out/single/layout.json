@@ -1,11 +1,35 @@
 [
     {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\maintoolbar.xml",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\maintoolbar.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_title.xml",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_title.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_favorite.xml",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_favorite.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_setting.xml",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_setting.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\favotitetoolbar.xml",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\favotitetoolbar.xml"
+    },
+    {
         "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_trn.xml",
         "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_trn.xml"
     },
     {
         "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_video.xml",
         "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_video.xml"
+    },
+    {
+        "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_mmain.xml",
+        "source": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\src\\main\\res\\layout\\activity_mmain.xml"
     },
     {
         "merged": "C:\\CookAndroid\\Project\\signlanguage_ds\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",

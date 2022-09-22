@@ -1,22 +1,48 @@
-com/google/codelab/mlkit/Video.java
- com.google.codelab.mlkit.Video
- com.google.codelab.mlkit.Video$1
- com.google.codelab.mlkit.Video$2
-com/google/codelab/mlkit/databinding/ActivityMainBinding.java
- com.google.codelab.mlkit.databinding.ActivityMainBinding
 com/google/codelab/mlkit/GraphicOverlay.java
  com.google.codelab.mlkit.GraphicOverlay
  com.google.codelab.mlkit.GraphicOverlay$Graphic
+com/google/codelab/mlkit/App.java
+ com.google.codelab.mlkit.App
 com/google/codelab/mlkit/databinding/ActivityVideoBinding.java
  com.google.codelab.mlkit.databinding.ActivityVideoBinding
-com/google/codelab/mlkit/TextGraphic.java
- com.google.codelab.mlkit.TextGraphic
+com/google/codelab/mlkit/databinding/ActivitySettingBinding.java
+ com.google.codelab.mlkit.databinding.ActivitySettingBinding
 com/google/codelab/mlkit/databinding/ActivityTrnBinding.java
  com.google.codelab.mlkit.databinding.ActivityTrnBinding
-com/google/codelab/mlkit/LabelGraphic.java
- com.google.codelab.mlkit.LabelGraphic
+com/google/codelab/mlkit/SettingActivity.java
+ com.google.codelab.mlkit.SettingActivity
+ com.google.codelab.mlkit.SettingActivity$1
+ com.google.codelab.mlkit.SettingActivity$2
+ com.google.codelab.mlkit.SettingActivity$3
+ com.google.codelab.mlkit.SettingActivity$4
 com/google/codelab/mlkit/BuildConfig.java
  com.google.codelab.mlkit.BuildConfig
+com/google/codelab/mlkit/LabelGraphic.java
+ com.google.codelab.mlkit.LabelGraphic
+com/google/codelab/mlkit/TextGraphic.java
+ com.google.codelab.mlkit.TextGraphic
+com/google/codelab/mlkit/TitleActivity.java
+ com.google.codelab.mlkit.TitleActivity
+ com.google.codelab.mlkit.TitleActivity$1
+com/google/codelab/mlkit/FavoriteActivity.java
+ com.google.codelab.mlkit.FavoriteActivity
+ com.google.codelab.mlkit.FavoriteActivity$1
+com/google/codelab/mlkit/databinding/ActivityFavoriteBinding.java
+ com.google.codelab.mlkit.databinding.ActivityFavoriteBinding
+com/google/codelab/mlkit/databinding/ActivityTitleBinding.java
+ com.google.codelab.mlkit.databinding.ActivityTitleBinding
+com/google/codelab/mlkit/databinding/MaintoolbarBinding.java
+ com.google.codelab.mlkit.databinding.MaintoolbarBinding
+com/google/codelab/mlkit/databinding/ActivityMainBinding.java
+ com.google.codelab.mlkit.databinding.ActivityMainBinding
+com/google/codelab/mlkit/databinding/FavotitetoolbarBinding.java
+ com.google.codelab.mlkit.databinding.FavotitetoolbarBinding
+com/google/codelab/mlkit/databinding/ActivityMmainBinding.java
+ com.google.codelab.mlkit.databinding.ActivityMmainBinding
+com/google/codelab/mlkit/MyServie.java
+ com.google.codelab.mlkit.MyServie
+ com.google.codelab.mlkit.MyServie$1
+ com.google.codelab.mlkit.MyServie$2
 com/google/codelab/mlkit/MainActivity.java
  com.google.codelab.mlkit.MainActivity
  com.google.codelab.mlkit.MainActivity$1
@@ -24,12 +50,18 @@ com/google/codelab/mlkit/MainActivity.java
  com.google.codelab.mlkit.MainActivity$3
  com.google.codelab.mlkit.MainActivity$4
  com.google.codelab.mlkit.MainActivity$5
- com.google.codelab.mlkit.MainActivity$6
- com.google.codelab.mlkit.MainActivity$7
- com.google.codelab.mlkit.MainActivity$8
+com/google/codelab/mlkit/Video.java
+ com.google.codelab.mlkit.Video
+ com.google.codelab.mlkit.Video$1
+ com.google.codelab.mlkit.Video$2
+ com.google.codelab.mlkit.Video$2$1
+ com.google.codelab.mlkit.Video$3
 com/google/codelab/mlkit/Translation.java
  com.google.codelab.mlkit.Translation
  com.google.codelab.mlkit.Translation$1
  com.google.codelab.mlkit.Translation$Morpheme
  com.google.codelab.mlkit.Translation$Morphemecomparator
  com.google.codelab.mlkit.Translation$NameEntity
+com/google/codelab/mlkit/mMainActivity.java
+ com.google.codelab.mlkit.mMainActivity
+ com.google.codelab.mlkit.mMainActivity$1

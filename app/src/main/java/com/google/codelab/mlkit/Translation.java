@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -84,6 +85,7 @@ public class Translation extends Activity {
     static List<Morpheme> morphemes = null;
     static String pre_text = "";
     static ArrayList<String> textArray;
+    static ArrayList<String> textArray2;
 
     @Override
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -99,6 +101,7 @@ public class Translation extends Activity {
         Gson gson = new Gson();
 
         textArray  = new ArrayList<>();
+        textArray2  = new ArrayList<>();
 
         Intent intent = getIntent();
         // 언어 분석 기술(문어)
@@ -209,6 +212,8 @@ public class Translation extends Activity {
 
                                     // 번역 알고리즘 적용
                                     translate((String) morphemeInfo.get("type"),(String) morphemeInfo.get("text") + " ");
+                                    textArray.add(output);
+                                    output += " ";
                                 }
 
 
@@ -274,8 +279,9 @@ public class Translation extends Activity {
         // intent2.putExtra("out_put", "결과값 : " + "\n" + output);
         intent2.putExtra("original", original); // 수어 번역 적용 안 된 원래 문장
         startActivity(intent2);
-        original = "";
-        finish();
+
+        output = "";
+        finish();   //현재 액티비티 종료
     }
 
 
@@ -283,18 +289,38 @@ public class Translation extends Activity {
     public static void translate (String type, String text) {
         text.replace("\n", " "); // 줄바꿈 -> 띄어쓰기로 변환
 
-        
+
         // 1. 수화 표현을 위한 문장 요소 제거
         // 동사 파생 접미사(XSV), 선어말 어미(EP), 명사형 전성 어미, 종결 어미 등 제거
 
         if (text.equals("?")) { // 문장 요소에서 ?를 예외 대상으로 분류
             output += text + " ";
 
-        } else if (!(type.equals("XSV") || type.equals("EP") || type.equals("ETN") || type.equals("EF") || type.equals("SF")
+        } else if (text.equals("배이러스 ")) {
+            output += "바이러스 ";
+
+        } else if (text.equals("1 ")) {
+            output += "첫째";
+
+        } else if (text.equals("2 ")) {
+            output += "둘째";
+
+        } else if (text.equals("3 ")) {
+            output += "셋째";
+
+        } else if (text.equals("4 ")) {
+            output += "넷째";
+
+        } else if (text.equals("주 ")) {
+            return;
+
+        } else if (text.equals("의 ")) {
+            output += "주의 ";
+            return;
+
+        }  else if (!(type.equals("XSV") || type.equals("EP") || type.equals("ETN") || type.equals("EF") || type.equals("SF")
                 || type.equals("SS") || type.equals("EP") || type.equals("JKO"))) {
             output += text;
-            textArray.add(output);
-            output += " ";
         }
 
         /*
@@ -321,12 +347,6 @@ public class Translation extends Activity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        output = "";
-        finish();   //현재 액티비티 종료
-    }
           /*
            JSONObject jsonObject = new JSONObject(json);
            JSONArray Array = jsonObject.getJSONArray("sentence").getJSONArray("WSD");

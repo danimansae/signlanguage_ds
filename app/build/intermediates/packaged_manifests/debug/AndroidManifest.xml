@@ -7,6 +7,9 @@
     <uses-sdk
         android:minSdkVersion="21"
         android:targetSdkVersion="30" />
+    // 진동
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     // 네트워크 권한
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -47,27 +50,48 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.google.codelab.mlkit.MainActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:screenOrientation="portrait" >
+            android:name="com.google.codelab.mlkit.Video"
+            android:exported="false" />
+        <activity
+            android:name="com.google.codelab.mlkit.FavoriteActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.google.codelab.mlkit.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.google.codelab.mlkit.TitleActivity"
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.google.codelab.mlkit.mMainActivity" />
+        <activity
+            android:name="com.google.codelab.mlkit.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:parentActivityName="com.google.codelab.mlkit.mMainActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.google.codelab.mlkit.Translation"
-            android:exported="true"
-            android:theme="@android:style/Theme.Translucent" >
-        </activity>
-        <activity
-            android:name="com.google.codelab.mlkit.Video"
-            android:exported="true"
-            android:parentActivityName="com.google.codelab.mlkit.MainActivity" >
-        </activity>
+            android:exported="true" />
 
+        <service
+            android:name="com.google.codelab.mlkit.MyServie"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.speech.RecognitionService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
             android:directBootAware="true"
