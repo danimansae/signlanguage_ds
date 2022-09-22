@@ -4,28 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:ignore="MissingClass">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="177dp"
-        android:text="안 뜸"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/surfaceView" />
+    tools:ignore="MissingClass">
 
     <SurfaceView
         android:id="@+id/surfaceView"
         android:layout_width="380dp"
         android:layout_height="249dp"
         android:layout_marginStart="88dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="88dp"
         android:layout_marginBottom="130dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -33,6 +20,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="380dp"
+        android:layout_height="380dp"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="177dp"
+        android:background="@drawable/solid_button"
+        android:text="안 뜸"
+        android:textAlignment="textStart"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surfaceView" />
     <LinearLayout
         android:id="@+id/textList"
         android:layout_width="wrap_content"

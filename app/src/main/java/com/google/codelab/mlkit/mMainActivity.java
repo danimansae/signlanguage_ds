@@ -132,12 +132,19 @@ public class mMainActivity extends AppCompatActivity implements View.OnClickList
             mRecognizer.startListening(intent);
         });
 
-        sttTrnBtn.setOnClickListener(this);
+        sttTrnBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Translation.class);
+                intent.putExtra("out_text", strs);
+                startActivity(intent);
+            }
+        });
 
     }
+
+
 //음성인식
-
-
 private RecognitionListener listener = new RecognitionListener() {
     @Override
     public void onReadyForSpeech(Bundle params) {
@@ -208,7 +215,7 @@ private RecognitionListener listener = new RecognitionListener() {
                 results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
         for(int i = 0; i < matches.size() ; i++){
             textView.setText(matches.get(i));
-            strs=matches.get(i).toString();
+            strs = matches.get(i).toString();
         }
 
         //음성 인식으로 출력(추정) 값이 나오는 데 보통 첫번째 배열의 값이 정확도 높음

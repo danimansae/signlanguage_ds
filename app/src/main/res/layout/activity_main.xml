@@ -12,82 +12,93 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include
-            layout="@layout/maintoolbar"/>
+<include
+    layout="@layout/maintoolbar"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="250dp">
-            <ImageView
-                android:background="@drawable/solid_button"
-                android:id="@+id/image_view"
-                android:layout_width="350dp"
-                android:layout_height="match_parent"
-                android:scaleType="fitStart"
-                app:layout_constraintTop_toBottomOf="parent"
-                app:layout_constraintBottom_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginBottom="10dp"
-                android:contentDescription="@string/select_image_for_text_recognition" />
-
-            <com.google.codelab.mlkit.GraphicOverlay
-                android:id="@+id/graphic_overlay"
-                android:gravity="center_vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_alignParentStart="true"
-                app:layout_constraintBottom_toBottomOf="@id/image_view"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="@id/image_view"
-                app:layout_constraintRight_toRightOf="@id/image_view"
-                app:layout_constraintTop_toTopOf="@id/image_view"
-                app:layout_constraintVertical_bias="0.0" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <ImageView
             android:background="@drawable/solid_button"
-            android:id="@+id/tv"
-            android:layout_gravity="center"
+            android:id="@+id/image_view"
             android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:hint="텍스트 데이터"
-            android:scrollbarAlwaysDrawVerticalTrack="true"
-            android:scrollbarFadeDuration="0"
-            android:scrollbars="vertical"
-            android:elevation="10dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitStart"
+            android:foregroundGravity="center"
+            android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             android:layout_marginBottom="10dp"
-            android:textSize="10pt"/>
+            android:contentDescription="@string/select_image_for_text_recognition" />
 
-        <LinearLayout
+        <com.google.codelab.mlkit.GraphicOverlay
+            android:layout_marginTop="30dp"
+            android:id="@+id/graphic_overlay"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintBottom_toBottomOf="@id/image_view"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@id/image_view"
+            app:layout_constraintRight_toRightOf="@id/image_view"
+            app:layout_constraintTop_toTopOf="@id/image_view"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:background="@drawable/solid_button"
+        android:id="@+id/tv"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:hint="텍스트 데이터"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarFadeDuration="0"
+        android:scrollbars="vertical"
+        android:elevation="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="10pt"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:background="@drawable/bluesolid_button"
+            android:id="@+id/button_text"
+            android:text="글자 인식"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/button_trn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal">
-            <Button
-                android:background="@drawable/bluesolid_button"
-                android:id="@+id/button_text"
-                android:text="글자 인식"
-                android:layout_marginRight="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bluesolid_button"
+            android:text="수어 통역" />
 
-            <Button
-                android:id="@+id/button_trn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/bluesolid_button"
-                android:text="수어 통역" />
-            <Button
-                android:background="@drawable/bluesolid_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="다시 가져오기"
-                android:id="@+id/button_reget"/>
-        </LinearLayout>
+        <Button
+            android:id="@+id/button_reget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bluesolid_button"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="다시 가져오기" />
+
+    </LinearLayout>
     </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -23,8 +23,10 @@ import android.content.res.AssetManager;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.util.Pair;
@@ -127,11 +129,12 @@ public class MainActivity extends AppCompatActivity {
 
         //툴바생성 https://stickode.tistory.com/114
         Toolbar toolbar=findViewById(R.id.main_toolbar);
+        toolbar.setBackgroundColor(Color.rgb(89,165,238));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);// 드로어를 꺼낼 홈 버튼 활성화
         getSupportActionBar().setDisplayShowTitleEnabled(false);//툴바에 타이틀 안보이게
-
         //참고: https://soohyun6879.tistory.com/77 [코딩기록:티스토리]
+
         mRegetButton = findViewById(R.id.button_reget);//다시 가져오기 버튼
         mTrnButton = findViewById(R.id.button_trn);//수화 번역 버튼
         mImageView = findViewById(R.id.image_view);//이미지 뷰
@@ -173,6 +176,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //다시 가져오기 버튼
+        mRegetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(Intent.ACTION_PICK);
+                intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
+                intent.setType("image/*");
+                startActivityForResult(intent,101);
+            }
+        });
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

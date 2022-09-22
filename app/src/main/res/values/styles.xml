@@ -1,11 +1,12 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowFullscreen">true</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -13,7 +14,6 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowBackground">@drawable/navi</item>
     </style>
-
 
     <!--text style-->
     <style name="Text.TitleStyle" parent="android:TextAppearance">
@@ -23,6 +23,7 @@
         <item name="android:fontFamily">@font/app_font</item>
         <item name="android:includeFontPadding">false</item>
     </style>
+
     <style name="Text.TitleStyle_bold" parent="android:TextAppearance">
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/app_font</item>

@@ -103,6 +103,7 @@ public class Translation extends Activity {
         textArray  = new ArrayList<>();
         textArray2  = new ArrayList<>();
 
+        // 이미지 텍스트 받기
         Intent intent = getIntent();
         // 언어 분석 기술(문어)
         pre_text = intent.getStringExtra("out_text");

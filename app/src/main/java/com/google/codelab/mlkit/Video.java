@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Spannable;
+import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.BackgroundColorSpan;
 import android.text.style.ForegroundColorSpan;
@@ -52,9 +53,10 @@ public class Video extends AppCompatActivity
     LinearLayout textList;
     TextView textView;
     ArrayList<String> textArray;
-    Spannable span;
+    SpannableStringBuilder span;
+
+    String original = "";
     String fileName = "";
-    String videoId = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,28 +71,29 @@ public class Video extends AppCompatActivity
         Intent intent = getIntent();
         // String output = intent.getStringExtra("out_put");
         textArray = intent.getStringArrayListExtra("textArray");
-        String original = intent.getStringExtra("original");
+        original = intent.getStringExtra("original");
 
-        // textView.textView.setText(original);
+        textView.setText(original);
 
+        /*
         for (int i = 0 ; i < textArray.size() ; i++) {
             textView.setText(textArray.get(i)); // 띄어쓰기 단위로 나눈 번역된 문장 화면에 표시
             // fileName = textArray.get(i); // intent로 실제 사용되는 형태소 받아오기
         }
+        */
 
-        // span = (Spannable) textView.getText();
-        // span.setSpan(new BackgroundColorSpan(0xff008299), 0, textView.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        span = new SpannableStringBuilder(textView.getText());
+
+        span.setSpan(
+                new ForegroundColorSpan(Color.RED),
+                0, // start
+                2, // end
+                Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+        );
+
+        textView.setText(span);
 
         // pathReference.get
-
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textView.setTextColor(Color.rgb(255, 0 ,0));
-            }
-        });
-
-        // output 띄어쓰기를 기준으로 리스트로 하나씩 받아오기..ing
 
         fileName = textArray.get(0); // 형태소 단위로 수어 영상 매칭 준비
 
@@ -102,6 +105,18 @@ public class Video extends AppCompatActivity
             e.printStackTrace();
         }
 
+        /*
+        if (count != 0) {
+            span = new SpannableStringBuilder(textArray.get(i));
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    textArray.get(i).length(), // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
+        }
+       */
+
         // ** 비디오 처리 **
         // VideoView videoView = findViewById(R.id.videoView);
 
@@ -109,19 +124,70 @@ public class Video extends AppCompatActivity
         surfaceHolder = surfaceView.getHolder();
         surfaceHolder.addCallback(this);
 
-        /*
+
         for (int i = 0 ; i < textArray.size() ; i++) {
             if (textArray.get(i).equals("급성 ")) {
-                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + "2131689474");
-                array.add("android.resource://" + getPackageName()+ "/" + "2131689473");
+                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.geubseong);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.dogseong);
+
             } else if (textArray.get(i).equals("산화 ")) {
-                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + "2131689475");
-                array.add("android.resource://" + getPackageName()+ "/" + "2131689476");
-            } else if (textArray.get(i).equals("")) {
+                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.sanhwa);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.seong);
+
+            } else if (textArray.get(i).equals("부식성 ")) {
+                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.busik);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.seong);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.muljil);
+
+            } else if (textArray.get(i).equals("실습실 ")) {
+                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.silseub);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sil);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sahang);
+
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.first);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.move);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sik);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.disk);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.virus);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.infection);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sogwalho);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.move);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sik);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.disk);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.use);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.si);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.format);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.use);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
+
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.second);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.computer);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.end);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.exit);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
+
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.third);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.lecture);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sil);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.in);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.mulpum);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.theft);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.haengdong);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.geumji);
+
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sogwalho);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.watch);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.camera);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.recording);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.ing);
             }
         }
 
-         */
 
         /*
         uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/geubseong.mp4?alt=media");
@@ -130,7 +196,7 @@ public class Video extends AppCompatActivity
         array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/seong.mp4?alt=media");
         */
 
-        uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.memory);
+        // uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.memory);
         // array.add("android.resource://" + getPackageName()+ "/" + videoId);
 
         count = 0;
@@ -194,6 +260,67 @@ public class Video extends AppCompatActivity
 
                     mp.prepare(); // 계속 오류 뜸
                     count++;
+
+                    span = new SpannableStringBuilder(original);
+
+                    switch (count) {
+                        case 1 :
+                            span.setSpan(
+                                    new ForegroundColorSpan(Color.RED),
+                                    2, // start
+                                    textView.length(), // end
+                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                            );
+                            break;
+
+                        case 2 :
+                            span.setSpan(
+                                    new ForegroundColorSpan(Color.RED),
+                                    2, // start
+                                    textView.length(), // end
+                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                            );
+                            break;
+
+                        case 3 :
+                            span.setSpan(
+                                    new ForegroundColorSpan(Color.RED),
+                                    2, // start
+                                    textView.length(), // end
+                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                            );
+                            break;
+
+                        case 4 :
+                            span.setSpan(
+                                    new ForegroundColorSpan(Color.RED),
+                                    2, // start
+                                    textView.length(), // end
+                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                            );
+                            break;
+
+                        case 5 :
+                            span.setSpan(
+                                    new ForegroundColorSpan(Color.RED),
+                                    2, // start
+                                    textView.length(), // end
+                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                            );
+                            break;
+
+                        case 40 :
+                            span.setSpan(
+                                    new ForegroundColorSpan(Color.RED),
+                                    2, // start
+                                    textView.length(), // end
+                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                            );
+                            break;
+                    }
+
+                    textView.setText(span);
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
