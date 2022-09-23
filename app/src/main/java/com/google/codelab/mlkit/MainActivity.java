@@ -49,6 +49,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -71,7 +72,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -106,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
      */
     private static final int DIM_IMG_SIZE_X = 224;
     private static final int DIM_IMG_SIZE_Y = 224;
-
 
     private final PriorityQueue<Map.Entry<String, Float>> sortedLabels =
             new PriorityQueue<>(

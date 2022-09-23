@@ -12,20 +12,19 @@
         android:layout_width="380dp"
         android:layout_height="249dp"
         android:layout_marginStart="88dp"
-        android:layout_marginTop="50dp"
         android:layout_marginEnd="88dp"
-        android:layout_marginBottom="130dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="380dp"
-        android:layout_height="360dp"
+        android:layout_height="340dp"
         android:layout_marginStart="177dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="177dp"
         android:background="@drawable/solid_button"
         android:text="안 뜸"

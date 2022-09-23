@@ -35,6 +35,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +47,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.navigation.NavigationView;
 
 import java.io.File;
@@ -120,6 +122,10 @@ public class mMainActivity extends AppCompatActivity implements View.OnClickList
         intent=new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE,getPackageName());
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,"ko-KR");
+
+
+        ImageView gif = (ImageView) findViewById(R.id.imageView_camera);
+        Glide.with(this).load(R.drawable.camera).into(gif);
 
         sttBtn.setOnClickListener(v -> {
             if ( Build.VERSION.SDK_INT >= 23 ){

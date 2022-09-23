@@ -9,13 +9,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></androidx.appcompat.widget.Toolbar>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.appcompat.widget.Toolbar>
 
         <TextView
             style="@style/Text.TitleStyle"
@@ -32,35 +32,33 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-
+            android:orientation="horizontal"
+            android:layout_gravity="center">
             <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:id="@+id/sttResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
                 android:text="음성인식 결과가 여기에 표시됩니다." />
-
             <ImageButton
-                android:id="@+id/sttStart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:src="@drawable/ic_baseline_keyboard_voice_24"
-                android:textColor="#F5F5EE" />
-
-            <ImageButton
-                android:id="@+id/stt_trn"
+                android:id="@+id/sttStart"
+                android:textColor="#F5F5EE"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_back_hand_24" />
+                android:src="@drawable/ic_baseline_keyboard_voice_24"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/stt_trn"
+                android:src="@drawable/ic_baseline_back_hand_24"/>
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="vertical">
 
@@ -73,6 +71,12 @@
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
+            <ImageView
+                android:id="@+id/imageView_camera"
+                android:layout_width="160dp"
+                android:layout_height="163dp"
+                app:srcCompat="@drawable/camera" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,7 +87,7 @@
                 <Button
                     android:id="@+id/button_camera"
                     android:layout_width="170dp"
-                    android:layout_height="300dp"
+                    android:layout_height="200dp"
                     android:background="@drawable/solid_button"
                     android:text="카메라"
                     android:textSize="10pt" />
@@ -91,12 +95,14 @@
                 <Button
                     android:id="@+id/button_gallery"
                     android:layout_width="170dp"
-                    android:layout_height="300dp"
+                    android:layout_height="200dp"
                     android:layout_marginLeft="20dp"
                     android:background="@drawable/bbsolid_button"
                     android:text="갤러리"
                     android:textSize="10pt" />
+
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

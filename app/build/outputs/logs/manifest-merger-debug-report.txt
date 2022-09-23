@@ -5,6 +5,7 @@ INJECTED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifes
 INJECTED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:2:1-76:12
 INJECTED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:2:1-76:12
 MERGED from [androidx.databinding:viewbinding:7.0.2] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\4222c4b22cb65a4ed9a3ff250f1e84b0\transformed\jetified-viewbinding-7.0.2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\e8758c167bbda3d229d609c516a322dd\transformed\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.firebase:firebase-analytics:21.1.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\645dcdc9395421d58b8b1639dc533a90\transformed\jetified-firebase-analytics-21.1.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.2.0-rc03] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\dc3fe7bb4eb819449279d1a5e251ca70\transformed\navigation-ui-ktx-2.2.0-rc03\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui:2.2.0-rc03] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\41e170e26d7394f0a56efc32ed1426c7\transformed\navigation-ui-2.2.0-rc03\AndroidManifest.xml:17:1-24:12
@@ -22,7 +23,6 @@ MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:
 MERGED from [com.google.mlkit:text-recognition-bundled-common:16.0.0-beta4] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\67de61241f0d7235294e2e5d03a74a64\transformed\jetified-text-recognition-bundled-common-16.0.0-beta4\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.mlkit:vision-common:17.1.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\f285580b9377a447b1908cccccc4a09a\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:2:1-18:12
 MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\776e59ef3da870888d8ee58b37b50e6e\transformed\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\c54c03b049ab0ec6b877cad6837e55b6\transformed\jetified-glide-4.10.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.mlkit:common:18.2.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\126246412707f486e4b771f3b02db990\transformed\jetified-common-18.2.0\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\8b878444792564d5692c907fc7c42fe1\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\191f5a66625675538bfd143ad8287507\transformed\jetified-firebase-encoders-json-17.1.0\AndroidManifest.xml:15:1-23:12
@@ -31,6 +31,7 @@ MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\ㅎㅇ\.
 MERGED from [com.google.android.gms:play-services-measurement-api:21.1.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\8cc8486ece3d1358097254932057445e\transformed\jetified-play-services-measurement-api-21.1.0\AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.firebase:firebase-installations:17.0.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\ce0f23da837be04c3b848c59c89a0ab7\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\d9f9c67b784c2afa45d1d478d25627c8\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:15:1-40:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\65c431c1bccae45f7c9706200ba4305e\transformed\jetified-gifdecoder-4.10.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\fda31b66fc6992b4ebef1dbf8623ca5e\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\cd17daee371fa72dae1e7726c5bfb2b3\transformed\jetified-firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\2687a1801e633f0764bb287fb9f7a448\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
@@ -86,7 +87,6 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-rc03] C:\Users\ㅎ
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\bf480fb3552554a3b1f633c461c46aaf\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\04a7332863b1910d9c63929ffb7a1c91\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\7b16ed2bbd6bf11558c5333f54e5402b\transformed\jetified-firebase-components-17.0.0\AndroidManifest.xml:15:1-23:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\65c431c1bccae45f7c9706200ba4305e\transformed\jetified-gifdecoder-4.10.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\8ad4a4fe421a0984ce26738f2c1a020e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\0c491ef63e60bd8f1587aa4e4b4bdae4\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0-rc03] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\f7b85b4dc1ad331f16ed7da8089f6395\transformed\jetified-lifecycle-livedata-core-ktx-2.2.0-rc03\AndroidManifest.xml:17:1-24:12
@@ -194,6 +194,8 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.1.0] C:
 		ADDED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:21:22-65
 application
 ADDED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:24:5-74:19
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\e8758c167bbda3d229d609c516a322dd\transformed\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\e8758c167bbda3d229d609c516a322dd\transformed\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
 MERGED from [com.google.firebase:firebase-analytics:21.1.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\645dcdc9395421d58b8b1639dc533a90\transformed\jetified-firebase-analytics-21.1.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:21.1.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\645dcdc9395421d58b8b1639dc533a90\transformed\jetified-firebase-analytics-21.1.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\626845e94a00c5325b16038682039c94\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
@@ -208,8 +210,6 @@ MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:
 MERGED from [com.google.android.gms:play-services-mlkit-text-recognition-common:17.0.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\66108b24d17cced4e664705227b65d09\transformed\jetified-play-services-mlkit-text-recognition-common-17.0.0\AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.mlkit:vision-common:17.1.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\f285580b9377a447b1908cccccc4a09a\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.mlkit:vision-common:17.1.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\f285580b9377a447b1908cccccc4a09a\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:8:5-16:19
-MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\c54c03b049ab0ec6b877cad6837e55b6\transformed\jetified-glide-4.10.0\AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\c54c03b049ab0ec6b877cad6837e55b6\transformed\jetified-glide-4.10.0\AndroidManifest.xml:10:5-20
 MERGED from [com.google.mlkit:common:18.2.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\126246412707f486e4b771f3b02db990\transformed\jetified-common-18.2.0\AndroidManifest.xml:8:5-24:19
 MERGED from [com.google.mlkit:common:18.2.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\126246412707f486e4b771f3b02db990\transformed\jetified-common-18.2.0\AndroidManifest.xml:8:5-24:19
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\8b878444792564d5692c907fc7c42fe1\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:28:5-36:19
@@ -224,6 +224,8 @@ MERGED from [com.google.firebase:firebase-installations:17.0.1] C:\Users\ㅎㅇ\
 MERGED from [com.google.firebase:firebase-installations:17.0.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\ce0f23da837be04c3b848c59c89a0ab7\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\d9f9c67b784c2afa45d1d478d25627c8\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:25:5-38:19
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\d9f9c67b784c2afa45d1d478d25627c8\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:25:5-38:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\65c431c1bccae45f7c9706200ba4305e\transformed\jetified-gifdecoder-4.10.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\65c431c1bccae45f7c9706200ba4305e\transformed\jetified-gifdecoder-4.10.0\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\2687a1801e633f0764bb287fb9f7a448\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\2687a1801e633f0764bb287fb9f7a448\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\afa39801e48df70648b0157a44c957b8\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
@@ -246,8 +248,6 @@ MERGED from [com.google.android.gms:play-services-basement:18.0.1] C:\Users\ㅎ�
 MERGED from [com.google.android.gms:play-services-basement:18.0.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\f11d3acc336a7d0ab3a671092c994388\transformed\jetified-play-services-basement-18.0.1\AndroidManifest.xml:20:5-24:19
 MERGED from [androidx.core:core:1.5.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\d32a583cfd7ad504f4358011e9999c65\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.5.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\d32a583cfd7ad504f4358011e9999c65\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
-MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\65c431c1bccae45f7c9706200ba4305e\transformed\jetified-gifdecoder-4.10.0\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\65c431c1bccae45f7c9706200ba4305e\transformed\jetified-gifdecoder-4.10.0\AndroidManifest.xml:9:5-20
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\8ad4a4fe421a0984ce26738f2c1a020e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\8ad4a4fe421a0984ce26738f2c1a020e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\36979ce3e53317cbc85531f4677289d1\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:25:5-39:19
@@ -352,6 +352,8 @@ INJECTED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifes
 INJECTED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:7.0.2] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\4222c4b22cb65a4ed9a3ff250f1e84b0\transformed\jetified-viewbinding-7.0.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:viewbinding:7.0.2] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\4222c4b22cb65a4ed9a3ff250f1e84b0\transformed\jetified-viewbinding-7.0.2\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\e8758c167bbda3d229d609c516a322dd\transformed\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\e8758c167bbda3d229d609c516a322dd\transformed\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-analytics:21.1.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\645dcdc9395421d58b8b1639dc533a90\transformed\jetified-firebase-analytics-21.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:21.1.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\645dcdc9395421d58b8b1639dc533a90\transformed\jetified-firebase-analytics-21.1.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-ui-ktx:2.2.0-rc03] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\dc3fe7bb4eb819449279d1a5e251ca70\transformed\navigation-ui-ktx-2.2.0-rc03\AndroidManifest.xml:20:5-22:41
@@ -386,8 +388,6 @@ MERGED from [com.google.mlkit:vision-common:17.1.0] C:\Users\ㅎㅇ\.gradle\cach
 MERGED from [com.google.mlkit:vision-common:17.1.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\f285580b9377a447b1908cccccc4a09a\transformed\jetified-vision-common-17.1.0\AndroidManifest.xml:6:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\776e59ef3da870888d8ee58b37b50e6e\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\776e59ef3da870888d8ee58b37b50e6e\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\c54c03b049ab0ec6b877cad6837e55b6\transformed\jetified-glide-4.10.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\c54c03b049ab0ec6b877cad6837e55b6\transformed\jetified-glide-4.10.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.mlkit:common:18.2.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\126246412707f486e4b771f3b02db990\transformed\jetified-common-18.2.0\AndroidManifest.xml:6:5-44
 MERGED from [com.google.mlkit:common:18.2.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\126246412707f486e4b771f3b02db990\transformed\jetified-common-18.2.0\AndroidManifest.xml:6:5-44
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\8b878444792564d5692c907fc7c42fe1\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:19:5-21:41
@@ -404,6 +404,8 @@ MERGED from [com.google.firebase:firebase-installations:17.0.1] C:\Users\ㅎㅇ\
 MERGED from [com.google.firebase:firebase-installations:17.0.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\ce0f23da837be04c3b848c59c89a0ab7\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\d9f9c67b784c2afa45d1d478d25627c8\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\d9f9c67b784c2afa45d1d478d25627c8\transformed\jetified-firebase-common-20.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\65c431c1bccae45f7c9706200ba4305e\transformed\jetified-gifdecoder-4.10.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\65c431c1bccae45f7c9706200ba4305e\transformed\jetified-gifdecoder-4.10.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\fda31b66fc6992b4ebef1dbf8623ca5e\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\fda31b66fc6992b4ebef1dbf8623ca5e\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\cd17daee371fa72dae1e7726c5bfb2b3\transformed\jetified-firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
@@ -514,8 +516,6 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ㅎㅇ\.gradle\caches\tr
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\04a7332863b1910d9c63929ffb7a1c91\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\7b16ed2bbd6bf11558c5333f54e5402b\transformed\jetified-firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\7b16ed2bbd6bf11558c5333f54e5402b\transformed\jetified-firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\65c431c1bccae45f7c9706200ba4305e\transformed\jetified-gifdecoder-4.10.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.10.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\65c431c1bccae45f7c9706200ba4305e\transformed\jetified-gifdecoder-4.10.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\8ad4a4fe421a0984ce26738f2c1a020e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\8ad4a4fe421a0984ce26738f2c1a020e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\0c491ef63e60bd8f1587aa4e4b4bdae4\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41

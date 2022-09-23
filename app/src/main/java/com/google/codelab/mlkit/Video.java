@@ -18,6 +18,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.TextView;
@@ -183,7 +184,7 @@ public class Video extends AppCompatActivity
                 array.add("android.resource://" + getPackageName()+ "/" + R.raw.sogwalho);
                 array.add("android.resource://" + getPackageName()+ "/" + R.raw.watch);
                 array.add("android.resource://" + getPackageName()+ "/" + R.raw.camera);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.recording);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.record);
                 array.add("android.resource://" + getPackageName()+ "/" + R.raw.ing);
             }
         }

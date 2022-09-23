@@ -40,6 +40,9 @@ android {
 }
 
 dependencies {
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
     // 수어 번역 알고리즘
     implementation 'com.google.code.gson:gson:2.9.0'
     implementation platform('com.google.firebase:firebase-bom:30.3.1')

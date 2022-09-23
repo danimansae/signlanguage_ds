@@ -1844,6 +1844,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable album
 drawable avd_hide_password
 drawable avd_show_password
 drawable bbsolid_button
@@ -1856,6 +1857,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable camera
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1899,6 +1901,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable logo
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1960,11 +1963,13 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable recognize
 drawable solid_button
 drawable son_mal
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable translate
 font app_font
 font nanum
 font nanum2
@@ -2216,6 +2221,8 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView_camera
+id imageView_logo
 id image_view
 id imgV
 id immediateStop
@@ -2747,7 +2754,7 @@ raw muljil
 raw mulpum
 raw myeon
 raw question
-raw recording
+raw record
 raw sahang
 raw sanhwa
 raw second
