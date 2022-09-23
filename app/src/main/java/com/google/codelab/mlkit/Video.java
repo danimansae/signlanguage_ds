@@ -261,63 +261,127 @@ public class Video extends AppCompatActivity
                     mp.prepare(); // 계속 오류 뜸
                     count++;
 
+                    // 로컬용 색 표시
                     span = new SpannableStringBuilder(original);
 
-                    switch (count) {
-                        case 1 :
-                            span.setSpan(
-                                    new ForegroundColorSpan(Color.RED),
-                                    2, // start
-                                    textView.length(), // end
-                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                            );
-                            break;
+                    if (textArray.get(0).equals("급성 ") || textArray.get(0).equals("산화 ")) {
+                        span.setSpan(
+                                new ForegroundColorSpan(Color.RED),
+                                2, // start
+                                textView.length(), // end
+                                Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                        );
 
-                        case 2 :
-                            span.setSpan(
-                                    new ForegroundColorSpan(Color.RED),
-                                    2, // start
-                                    textView.length(), // end
-                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                            );
-                            break;
+                    } else if (textArray.get(0).equals("부식성 ")) {
+                        switch (count) {
+                            case 1 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        2, // start
+                                        3, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
 
-                        case 3 :
-                            span.setSpan(
-                                    new ForegroundColorSpan(Color.RED),
-                                    2, // start
-                                    textView.length(), // end
-                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                            );
-                            break;
+                            case 2 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        4, // start
+                                        textView.length(), // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+                        }
 
-                        case 4 :
-                            span.setSpan(
-                                    new ForegroundColorSpan(Color.RED),
-                                    2, // start
-                                    textView.length(), // end
-                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                            );
-                            break;
+                    } else if (textArray.get(0).equals("실습실 ")) {
+                        switch (count) {
+                            case 1 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        2, // start
+                                        3, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
 
-                        case 5 :
-                            span.setSpan(
-                                    new ForegroundColorSpan(Color.RED),
-                                    2, // start
-                                    textView.length(), // end
-                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                            );
-                            break;
+                            case 2 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        4, // start
+                                        6, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
 
-                        case 40 :
-                            span.setSpan(
-                                    new ForegroundColorSpan(Color.RED),
-                                    2, // start
-                                    textView.length(), // end
-                                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                            );
-                            break;
+                            case 3 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        7, // start
+                                        9, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 4 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        10, // start
+                                        11, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 5 :
+                            case 6 :
+                            case 7 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        13, // start
+                                        16, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 8 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        17, // start
+                                        21, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 9 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        22, // start
+                                        24, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 10 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        25, // start
+                                        27, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 40 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        2, // start
+                                        textView.length(), // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+                        }
                     }
+
+
+
 
                     textView.setText(span);
 

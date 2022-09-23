@@ -17,10 +17,12 @@ package com.google.codelab.mlkit;
 
 import android.annotation.SuppressLint;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -60,6 +62,7 @@ import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.TextRecognizer;
 import com.google.mlkit.vision.text.korean.KoreanTextRecognizerOptions;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
@@ -340,4 +343,38 @@ public class MainActivity extends AppCompatActivity {
         return bitmap;
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK) { // 결과가 있을 경우
+            Bitmap bitmap = null;
+            intent=new Intent(this,MainActivity.class);
+            switch (requestCode) {
+                case 101:
+                    // 1) 이미지 절대경로로 이미지 세팅하기
+                    Cursor cursor = getContentResolver().query(data.getData(), null, null, null, null);
+                    if (cursor != null) {
+                        cursor.moveToFirst();
+                        int index = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+                        imagePath = cursor.getString(index);
+                        cursor.close();
+                    }
+                    // 2) InputStream 으로 이미지 세팅하기
+                    try {
+                        InputStream inputStream = getContentResolver().openInputStream(data.getData());
+                        pic = BitmapFactory.decodeStream(inputStream);
+                        inputStream.close();
+
+                        ByteArrayOutputStream bs = new ByteArrayOutputStream();
+                        pic.compress(Bitmap.CompressFormat.JPEG,50,bs);
+                        intent.putExtra("bimg",bs.toByteArray());
+                        startActivity(intent);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        Toast.makeText(this, "사진을 가져오지 못했습니다.", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+            }
+        }
+    }
 }
