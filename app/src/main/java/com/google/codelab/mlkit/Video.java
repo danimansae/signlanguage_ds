@@ -322,7 +322,7 @@ public class Video extends AppCompatActivity
                                 );
                                 break;
 
-                            case 4 :
+                            case 4 : // 1
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
                                         10, // start
@@ -369,11 +369,253 @@ public class Video extends AppCompatActivity
                                 );
                                 break;
 
-                            case 40 :
+                            case 11 :
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        2, // start
-                                        textView.length(), // end
+                                        28, // start
+                                        29, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        54, // start
+                                        55, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 12 :
+                            case 13 :
+                            case 14 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        29, // start
+                                        33, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 15 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        33, // start
+                                        35, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 16 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        35, // start
+                                        36, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 17 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        37, // start
+                                        40, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 18 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        41, // start
+                                        42, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 19 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        43, // start
+                                        46, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 20 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        49, // start
+                                        53, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 21 : // 2
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        56, // start
+                                        57, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 22 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        59, // start
+                                        62, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 23 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        63, // start
+                                        65, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 24 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        66, // start
+                                        67, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 25 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        68, // start
+                                        71, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 26 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        74, // start
+                                        78, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 27 : // 3
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        80, // start
+                                        81, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 28 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        83, // start
+                                        85, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 29 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        85, // start
+                                        87, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 30 : // 내
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        87, // start
+                                        89, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 31 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        89, // start
+                                        98, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 32 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        98, // start
+                                        100, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 33 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        101, // start
+                                        103, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 34 : // 금지합니다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        105, // start
+                                        110, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 35 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        112, // start
+                                        113, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        121, // start
+                                        122, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 36 :
+                            case 37 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        113, // start
+                                        117, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 38 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        118, // start
+                                        120, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 39 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        120, // start
+                                        121, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;

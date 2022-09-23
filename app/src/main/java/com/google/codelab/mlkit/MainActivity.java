@@ -173,9 +173,13 @@ public class MainActivity extends AppCompatActivity {
         mTrnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Translation.class);
-                intent.putExtra("out_text", out_text);
-                startActivity(intent);
+                if (out_text.equals("")) {
+                    Toast.makeText(getApplicationContext(), "글자 인식 버튼을 눌러주세요.",Toast.LENGTH_LONG).show();
+                } else {
+                    Intent intent = new Intent(getApplicationContext(), Translation.class);
+                    intent.putExtra("out_text", out_text);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -183,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
         mRegetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                out_text = "";
                 intent = new Intent(Intent.ACTION_PICK);
                 intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
                 intent.setType("image/*");
