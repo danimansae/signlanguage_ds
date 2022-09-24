@@ -259,11 +259,11 @@ MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\ㅎㅇ\.gradle\
 	android:supportsRtl
 		ADDED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:29:9-35
 	android:label
-		ADDED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:27:9-34
+		ADDED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:27:9-27
 	android:roundIcon
 		ADDED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:28:9-54
 	android:icon
-		ADDED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:26:9-43
+		ADDED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:26:9-45
 	android:allowBackup
 		ADDED from C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:25:9-35
 	android:theme

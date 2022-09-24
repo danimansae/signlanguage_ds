@@ -77,10 +77,10 @@
 43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 43-->[androidx.core:core:1.5.0] C:\Users\ㅎㅇ\.gradle\caches\transforms-3\d32a583cfd7ad504f4358011e9999c65\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 44        android:debuggable="true"
-45        android:icon="@mipmap/ic_launcher"
-45-->C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:26:9-43
-46        android:label="수어 번역 서비스"
-46-->C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:27:9-34
+45        android:icon="@mipmap/icon_launcher"
+45-->C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:26:9-45
+46        android:label="손말"
+46-->C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:27:9-27
 47        android:roundIcon="@mipmap/ic_launcher_round"
 47-->C:\CookAndroid\Project\signlanguage_ds\app\src\main\AndroidManifest.xml:28:9-54
 48        android:supportsRtl="true"

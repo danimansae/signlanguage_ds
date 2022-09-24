@@ -11,22 +11,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </androidx.appcompat.widget.Toolbar>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.appcompat.widget.Toolbar>
 
         <TextView
             style="@style/Text.TitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="10dp"
             android:text="손말"
             android:textColor="#92BCE4"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -36,11 +36,13 @@
             android:layout_gravity="center">
             <TextView
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:id="@+id/sttResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="15dp"
                 android:text="음성인식 결과가 여기에 표시됩니다." />
+
             <ImageButton
                 android:layout_marginLeft="30dp"
                 android:id="@+id/sttStart"
@@ -49,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_keyboard_voice_24"
                 />
+
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,51 +61,65 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
                 android:text="수어 통역이 필요한 이미지를 \n 가져와 보세요."
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
-            <ImageView
-                android:id="@+id/imageView_camera"
-                android:layout_width="160dp"
-                android:layout_height="163dp"
-                app:srcCompat="@drawable/camera" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/imageView_camera"
+                    android:layout_width="160dp"
+                    android:layout_height="163dp"
+                    app:srcCompat="@drawable/camera" />
+                <ImageView
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/imageView_album"
+                    android:layout_width="160dp"
+                    android:layout_height="163dp"
+                    app:srcCompat="@drawable/album" />
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_gravity="center"
                 android:gravity="center_horizontal"
-                android:orientation="horizontal">
+                >
 
                 <Button
+                    android:background="@drawable/solid_button"
                     android:id="@+id/button_camera"
                     android:layout_width="170dp"
                     android:layout_height="200dp"
-                    android:background="@drawable/solid_button"
                     android:text="카메라"
-                    android:textSize="10pt" />
+                    android:textSize="10pt"/>
 
                 <Button
+                    android:background="@drawable/bbsolid_button"
                     android:id="@+id/button_gallery"
+                    android:layout_marginLeft="20dp"
                     android:layout_width="170dp"
                     android:layout_height="200dp"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/bbsolid_button"
                     android:text="갤러리"
-                    android:textSize="10pt" />
-
+                    android:textSize="10pt"/>
             </LinearLayout>
-
         </LinearLayout>
 
     </LinearLayout>

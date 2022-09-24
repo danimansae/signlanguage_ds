@@ -23,8 +23,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="수어 번역 서비스"
+        android:icon="@mipmap/icon_launcher"
+        android:label="손말"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"

@@ -3,17 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/drawable-v24/ic_login_bk.xml" value="0.1" />
+        <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/drawable-v24/login_shape_bk.xml" value="0.1" />
         <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/drawable/bbsolid_button.xml" value="0.1" />
         <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/drawable/bluesolid_button.xml" value="0.1" />
         <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/drawable/button_push.xml" value="0.1" />
+        <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/drawable/confirm_btn.xml" value="0.1" />
         <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/drawable/solid_button.xml" value="0.1" />
         <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/activity_favorite.xml" value="0.23645833333333333" />
         <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/activity_mmain.xml" value="0.264" />
+        <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/activity_mmain.xml" value="0.24821610601427116" />
         <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/activity_setting.xml" value="0.23645833333333333" />
         <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/activity_title.xml" value="0.23645833333333333" />
         <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/activity_trn.xml" value="0.264" />
-        <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/activity_video.xml" value="0.23802083333333332" />
+        <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/activity_video.xml" value="0.264" />
+        <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/favotitetoolbar.xml" value="0.23645833333333333" />
+        <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/layout_box.xml" value="0.2526041666666667" />
         <entry key="..\:/CookAndroid/Project/signlanguage_ds/app/src/main/res/layout/maintoolbar.xml" value="0.23645833333333333" />
       </map>
     </option>
