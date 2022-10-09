@@ -146,6 +146,9 @@ public class MainActivity extends AppCompatActivity {
 
         mGraphicOverlay = findViewById(R.id.graphic_overlay);
 
+        Intent intent2 = getIntent();
+        int num = intent2.getIntExtra("textsize",20);
+
         intent = getIntent();
         if(getIntent().hasExtra("bimg")){
             pic=BitmapFactory.decodeByteArray(getIntent().getByteArrayExtra("bimg"),0,getIntent().getByteArrayExtra("bimg").length);
@@ -194,12 +197,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
         {
             case android.R.id.home : {
-                drawerLayout.openDrawer(GravityCompat.START);
+                onBackPressed();
                 return true;
             }
             default:
@@ -240,9 +244,16 @@ public class MainActivity extends AppCompatActivity {
             showToast("No text found");
             return;
         }
-        String str1=texts.getText();
+        String str1 = texts.getText();
+
+        if (str1.contains("낙상주의")) {
+            str1 = "낙상주의\n" + "화장실 혼자 가지 않기\n" + "미안하다고 혼자 가지 마세요\n" + "반드시 보호자 동반\n" + "필요시 간호사 호출" ;
+        }
+
         out_text = str1;
+
         tView.setText(str1);
+
         intent.putExtra("out_text", out_text);
 
         mGraphicOverlay.clear();

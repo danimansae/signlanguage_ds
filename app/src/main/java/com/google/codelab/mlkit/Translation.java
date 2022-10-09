@@ -279,6 +279,7 @@ public class Translation extends Activity {
         intent2.putStringArrayListExtra("textArray", textArray); // 형태소 분석 결과 띄어쓰기 단어로 저장함
         // intent2.putExtra("out_put", "결과값 : " + "\n" + output);
         intent2.putExtra("original", original); // 수어 번역 적용 안 된 원래 문장
+
         startActivity(intent2);
 
         output = "";

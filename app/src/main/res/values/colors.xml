@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="texBackgroundColor">#33000000</color>
+    <color name="white">#ffffff</color>
 
     <color name="colorPrimary2">#1F5BF3</color>
     <color name="colorPrimaryDark2">#0947E8</color>
@@ -16,7 +17,5 @@
 
     <!--colros for card-->
     <color name="whiteCardColor">#fff</color>
-
-    <color name="white">#ffffff</color>
 
 </resources>
