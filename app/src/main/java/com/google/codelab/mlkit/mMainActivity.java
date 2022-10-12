@@ -78,6 +78,8 @@ public class mMainActivity extends AppCompatActivity implements View.OnClickList
     ImageButton sttTrnBtn;
     final int PERMISSION = 1;
     TextView textView;
+    TextView text2;
+    TextView sttResult;
     String strs;
 
     @SuppressLint("SimpleDateFormat")
@@ -118,11 +120,12 @@ public class mMainActivity extends AppCompatActivity implements View.OnClickList
         textView = (TextView)findViewById(R.id.sttResult);
         sttBtn = (ImageButton) findViewById(R.id.sttStart);
         sttTrnBtn=(ImageButton)findViewById(R.id.stt_trn);
+        text2 = findViewById(R.id.text2);
+        sttResult = findViewById(R.id.sttResult);
 
-        intent=new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE,getPackageName());
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,"ko-KR");
-
 
         ImageView gif = (ImageView) findViewById(R.id.imageView_camera);
         Glide.with(this).load(R.drawable.camera).into(gif);
@@ -149,8 +152,14 @@ public class mMainActivity extends AppCompatActivity implements View.OnClickList
             }
         });
 
-    }
+        // 텍스트 사이즈 관련
+        Intent intent3 = getIntent();
+        int num = intent3.getIntExtra("textsize",15);
 
+        text2.setTextSize(num);
+        mCameraButton.setTextSize(num);
+        mPhotoButton.setTextSize(num);
+    }
 
     //음성인식
     private RecognitionListener listener = new RecognitionListener() {
