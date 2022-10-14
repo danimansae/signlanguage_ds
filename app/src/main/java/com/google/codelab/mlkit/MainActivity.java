@@ -363,7 +363,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK) { // 결과가 있을 경우
             Bitmap bitmap = null;
-            intent=new Intent(this,MainActivity.class);
+            intent = new Intent(this,MainActivity.class);
             switch (requestCode) {
                 case 101:
                     // 1) 이미지 절대경로로 이미지 세팅하기
@@ -373,6 +373,7 @@ public class MainActivity extends AppCompatActivity {
                         int index = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
                         imagePath = cursor.getString(index);
                         cursor.close();
+                        finish();
                     }
                     // 2) InputStream 으로 이미지 세팅하기
                     try {
@@ -384,9 +385,11 @@ public class MainActivity extends AppCompatActivity {
                         pic.compress(Bitmap.CompressFormat.JPEG,50,bs);
                         intent.putExtra("bimg",bs.toByteArray());
                         startActivity(intent);
+                        finish();
                     } catch (IOException e) {
                         e.printStackTrace();
                         Toast.makeText(this, "사진을 가져오지 못했습니다.", Toast.LENGTH_SHORT).show();
+                        finish();
                     }
                     break;
             }
