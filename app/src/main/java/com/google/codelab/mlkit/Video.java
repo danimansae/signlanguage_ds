@@ -154,6 +154,36 @@ public class Video extends AppCompatActivity
                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                 );
 
+            } else if (textArray.get(0).equals("잠시 ")) {
+                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.jamsi);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.seolbi);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gongsa);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.lo);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.chadan);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.yejeong);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gongsa);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.end);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.slightly);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gold);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.occur);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.ni);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.disembogue);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.use);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
+
+                span.setSpan(
+                        new ForegroundColorSpan(Color.RED),
+                        0, // start
+                        3, // end
+                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                );
 
             } else if (textArray.get(0).equals("거주자 ")) {
                 span.setSpan(
@@ -454,6 +484,173 @@ public class Video extends AppCompatActivity
                                 Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                         );
 
+                    } else if (textArray.get(0).equals("잠시 ")) {
+                        switch (count) {
+                            case 1 : // 후
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        3, // start
+                                        4, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 2 :
+                            case 3 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        5, // start
+                                        7, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 4 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        8, // start
+                                        10, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 5 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        10, // start
+                                        11, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 6 :
+                            case 7 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        16, // start
+                                        18, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 8 : // 예정
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        21, // start
+                                        23, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 9 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        27, // start
+                                        29, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 10 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        30, // start
+                                        32, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 11 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        33, // start
+                                        34, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 12 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        35, // start
+                                        37, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 13 :
+                            case 14 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        39, // start
+                                        41, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 15 : // 나오다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        43, // start
+                                        46, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 16 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        48, // start
+                                        51, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 17 : // 수돗물
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        52, // start
+                                        55, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 18 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        57, // start
+                                        61, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 19 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        62, // start
+                                        63, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 20 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        64, // start
+                                        67, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 21 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        70, // start
+                                        72, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+                        }
 
                     } else if (textArray.get(0).equals("거주자 ")) {
                         switch (count) {
