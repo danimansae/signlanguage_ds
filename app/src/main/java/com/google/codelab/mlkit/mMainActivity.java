@@ -119,7 +119,7 @@ public class mMainActivity extends AppCompatActivity implements View.OnClickList
         //음성인식부
         textView = (TextView)findViewById(R.id.sttResult);
         sttBtn = (ImageButton) findViewById(R.id.sttStart);
-        sttTrnBtn=(ImageButton)findViewById(R.id.stt_trn);
+        sttTrnBtn = (ImageButton)findViewById(R.id.stt_trn);
         text2 = findViewById(R.id.text2);
         sttResult = findViewById(R.id.sttResult);
         sttResult.setSelected(true); // 글자 흐르게

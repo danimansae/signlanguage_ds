@@ -7,6 +7,21 @@
 
     tools:ignore="MissingClass">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/surfaceView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
     <SurfaceView
         android:id="@+id/surfaceView"
         android:layout_width="380dp"
@@ -23,13 +38,15 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="380dp"
-        android:layout_height="340dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="15dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="15dp"
         android:background="@drawable/solid_button"
         android:elevation="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:scrollbarAlwaysDrawVerticalTrack="true"
         android:scrollbarFadeDuration="0"
         android:scrollbars="vertical"
@@ -52,9 +69,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"></LinearLayout>
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constrainedHeight="true"
+     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

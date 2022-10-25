@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
         //툴바생성 https://stickode.tistory.com/114
         Toolbar toolbar=findViewById(R.id.main_toolbar);
-        toolbar.setBackgroundColor(Color.rgb(89,165,238));
+        // toolbar.setBackgroundColor(Color.rgb(89,165,238));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);// 드로어를 꺼낼 홈 버튼 활성화
         getSupportActionBar().setDisplayShowTitleEnabled(false);//툴바에 타이틀 안보이게
