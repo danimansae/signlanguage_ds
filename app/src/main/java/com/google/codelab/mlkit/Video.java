@@ -76,7 +76,7 @@ public class Video extends AppCompatActivity
         textArray = intent.getStringArrayListExtra("textArray");
         original = intent.getStringExtra("original");
 
-            textView.setText(original);
+        textView.setText(original);
 
         /*
         for (int i = 0 ; i < textArray.size() ; i++) {
@@ -118,286 +118,370 @@ public class Video extends AppCompatActivity
 
         span = new SpannableStringBuilder(textView.getText());
 
-            if (textArray.get(0).equals("급성 ")) {
-                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.geubseong);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.dogseong);
+        if (textArray.get(0).equals("급성 ")) {
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.geubseong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.dogseong);
 
-                span.setSpan(
-                        new ForegroundColorSpan(Color.RED),
-                        0, // start
-                        2, // end
-                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                );
-
-
-            } else if (textArray.get(0).equals("산화 ")) {
-                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.sanhwa);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.seong);
-
-                span.setSpan(
-                        new ForegroundColorSpan(Color.RED),
-                        0, // start
-                        2, // end
-                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                );
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    2, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
 
 
-            } else if (textArray.get(0).equals("부식성 ")) {
-                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.busik);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.seong);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.muljil);
+        } else if (textArray.get(0).equals("산화 ")) {
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.sanhwa);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.seong);
 
-                span.setSpan(
-                        new ForegroundColorSpan(Color.RED),
-                        0, // start
-                        2, // end
-                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                );
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    2, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
 
-            } else if (textArray.get(0).equals("잠시 ")) {
-                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.jamsi);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.seolbi);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gongsa);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.lo);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.chadan);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.yejeong);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gongsa);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.end);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.slightly);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gold);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.occur);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.ni);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.disembogue);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.use);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
+        } else if (textArray.get(0).equals("손씻 ")) {
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.hand);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.wash);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.life);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.hwa);
 
-                span.setSpan(
-                        new ForegroundColorSpan(Color.RED),
-                        0, // start
-                        3, // end
-                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                );
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    1, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
 
-            } else if (textArray.get(0).equals("거주자 ")) {
-                span.setSpan(
-                        new ForegroundColorSpan(Color.RED),
-                        0, // start
-                        3, // end
-                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                );
+        } else if (textArray.get(0).equals("마스크 ")) {
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.mask);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.wear);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.pilsu);
 
-                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.geojuja);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.useon);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.jucha);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.jiyeog);
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    3, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.heoga);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.bujeong);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.car);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.jucha);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.myeon);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gyeonin);
+        } else if (textArray.get(0).equals("체온 ")) {
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.temperature);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.inspection);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.enter);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.seyo);
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.question);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.dansog);
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    2, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
+
+        } else if (textArray.get(0).equals("이 ")) {
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.thiss);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.seat);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.leave);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.seyo);
+
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    1, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
+
+        } else if (textArray.get(0).equals("부식성 ")) {
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.busik);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.seong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.muljil);
+
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    2, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
+
+        } else if (textArray.get(0).equals("잠시 ")) {
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.jamsi);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.seolbi);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.gongsa);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.lo);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.chadan);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.yejeong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.gongsa);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.end);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.slightly);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.gold);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.occur);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.ni);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.water);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.disembogue);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.use);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
+
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    3, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
+
+        } else if (textArray.get(0).equals("일반 ")) {
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.ilban);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.soa);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.byeongdong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.at);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.bohoja);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.always);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.hwanja);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.wa);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.dongban);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.stumble);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.or);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.budijhida);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.issda);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.so);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.byeongdong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.corridor);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.at);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.run);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.bujeong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.dolog);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.jusibsio);
+
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    2, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
+
+        } else if (textArray.get(0).equals("거주자 ")) {
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    3, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
+
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.geojuja);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.useon);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.jucha);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.jiyeog);
+
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.heoga);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.bujeong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.car);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.jucha);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.myeon);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.gyeonin);
+
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.question);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.dansog);
 
 
-            } else if (textArray.get(0).equals("낙상주의 ")) {
-                span.setSpan(
-                        new ForegroundColorSpan(Color.RED),
-                        0, // start
-                        2, // end
-                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                );
+        } else if (textArray.get(0).equals("낙상주의 ")) {
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    2, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
 
-                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.nagsang);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.nagsang);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.toilet);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.alone);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.go);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.bujeong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.toilet);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.alone);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.go);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.bujeong);
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sorry);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.haeseo);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.alone);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.go);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.malda);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.seyo);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.sorry);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.haeseo);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.alone);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.go);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.malda);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.seyo);
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.certainly);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.bohoja);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.dongban);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.certainly);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.bohoja);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.dongban);
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.need);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.myeon);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.nurse);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.call);
-
-
-            } else if (textArray.get(0).equals("실습실 ")) {
-                span.setSpan(
-                        new ForegroundColorSpan(Color.RED),
-                        0, // start
-                        2, // end
-                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                );
-
-                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.silseub);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sil);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sahang);
-
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.first);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.move);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sik);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.disk);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.virus);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.infection);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
-
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sogwalho);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.move);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sik);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.disk);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.use);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.si);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.format);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.use);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
-
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.second);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.computer);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.end);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.exit);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
-
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.third);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.lecture);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sil);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.in);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.mulpum);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.theft);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.haengdong);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.geumji);
-
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sogwalho);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.watch);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.camera);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.record);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.ing);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.need);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.myeon);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.nurse);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.call);
 
 
-            } else if (textArray.get(0).equals("문화유산 ")) {
-                span.setSpan(
-                        new ForegroundColorSpan(Color.RED),
-                        0, // start
-                        4, // end
-                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
-                );
+        } else if (textArray.get(0).equals("실습실 ")) {
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    2, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
 
-                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.munhwajae);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gwanlam);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.safety);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sahang);
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.silseub);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.sil);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.sahang);
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.munhwajae);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.pagoe);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.or);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.write);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.etc);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.hweson);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.haengdong);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.cheoljeo);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.first);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.move);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.sik);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.disk);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.virus);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.infection);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.munhwajae);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.lean);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.or);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.climb);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.haengdong);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.run);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.haengdong);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.etc);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.safety);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.jaehae);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.concern);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.have);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.haeseo);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.sogwalho);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.move);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.sik);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.disk);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.use);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.si);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.format);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.use);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sangeob);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.jeog);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.purpose);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.chwalyeong);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.geumji);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.second);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.computer);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.end);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.exit);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.exhibition);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.area);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.all);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.space);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.nosmoking);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.area);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.third);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.lecture);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.sil);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.in);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.mulpum);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.theft);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.haengdong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.geumji);
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gwanlam);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.client);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.ege);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.bulpyeon);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.affect);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.bujeong);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.dolog);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.joyong);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gwanlam);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.seyo);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.sogwalho);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.watch);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.camera);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.record);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.ing);
 
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.we);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gwijung);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.munhwajae);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.protect);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.safety);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.gwanlam);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.butag);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.rest);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.space);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.exhibition);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.area);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.around);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.table);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.chair);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.use);
-                array.add("android.resource://" + getPackageName()+ "/" + R.raw.seyo);
 
-            } else {
-                uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.sahang);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.lean);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.haengdong);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.safety);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.gwanlam);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.sil);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.caution);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.sahang);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.protect);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.and);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.move);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.sik);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.or);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.climb);
-                array.add("android.resource://" + getPackageName() + "/" + R.raw.disk);
-            }
+        } else if (textArray.get(0).equals("문화유산 ")) {
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    4, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
+
+            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.munhwajae);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.gwanlam);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.safety);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.sahang);
+
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.munhwajae);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.pagoe);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.or);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.write);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.etc);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.hweson);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.haengdong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.cheoljeo);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.munhwajae);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.lean);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.or);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.climb);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.haengdong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.run);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.haengdong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.etc);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.safety);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.jaehae);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.concern);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.have);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.haeseo);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.sangeob);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.jeog);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.purpose);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.chwalyeong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.geumji);
+
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.exhibition);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.area);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.all);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.space);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.nosmoking);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.area);
+
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.gwanlam);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.client);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.ege);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.bulpyeon);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.affect);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.bujeong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.dolog);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.joyong);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.gwanlam);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.seyo);
+
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.we);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.gwijung);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.munhwajae);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.protect);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.safety);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.gwanlam);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.butag);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.rest);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.space);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.exhibition);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.area);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.around);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.table);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.chair);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.use);
+            array.add("android.resource://" + getPackageName()+ "/" + R.raw.seyo);
+
+        } else {
+            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.sahang);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.lean);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.haengdong);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.safety);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.gwanlam);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.sil);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.caution);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.sahang);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.protect);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.and);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.move);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.sik);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.or);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.climb);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.disk);
+        }
 
         textView.setText(span);
 
@@ -483,6 +567,127 @@ public class Video extends AppCompatActivity
                                 textView.length(), // end
                                 Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                         );
+
+                    } else if (textArray.get(0).equals("손씻 ")) {
+                        switch (count) {
+                            case 1 : // 씻기
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        1, // start
+                                        3, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 2 : // 생활
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        3, // start
+                                        5, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 3 : // 화
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        5, // start
+                                        6, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+                        }
+
+                    } else if (textArray.get(0).equals("마스크 ")) {
+                        switch (count) {
+                            case 1 : // 착용
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        4, // start
+                                        6, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 2 : // 필수
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        7, // start
+                                        9, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+                        }
+
+                    } else if (textArray.get(0).equals("체온 ")) {
+                        switch (count) {
+                            case 1 : // 측정
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        4, // start
+                                        7, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 2 : // 후
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        8, // start
+                                        9, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 3 : // 들어가다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        10, // start
+                                        13, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 4 : // 세요
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        13, // start
+                                        15, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+                        }
+
+                    } else if (textArray.get(0).equals("이 ")) {
+                        switch (count) {
+                            case 1 : // 자리
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        2, // start
+                                        4, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 2 : // 비워두다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        6, // start
+                                        9, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 3 : // 세요
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        9, // start
+                                        11, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                        }
 
                     } else if (textArray.get(0).equals("잠시 ")) {
                         switch (count) {
@@ -647,6 +852,208 @@ public class Video extends AppCompatActivity
                                         new ForegroundColorSpan(Color.RED),
                                         70, // start
                                         72, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+                        }
+
+                    } else if (textArray.get(0).equals("일반 ")) {
+                        switch (count) {
+                            case 1 : // 소아
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        3, // start
+                                        5, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 2 : // 병동
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        6, // start
+                                        8, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 3 : // 에서
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        8, // start
+                                        10, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 4 : // 보호자
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        12, // start
+                                        15, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 5 : // 항상
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        17, // start
+                                        19, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 6 : // 환아
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        20, // start
+                                        22, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 7 : // 와
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        22, // start
+                                        23, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 8 : // 동행
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        24, // start
+                                        28, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 9 : // 바라다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        33, // start
+                                        37, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 10 : // 넘어지다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        39, // start
+                                        42, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 11 : // 거나
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        42, // start
+                                        44, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 12 : // 부딪히다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        45, // start
+                                        48, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 13 : // 있다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        51, // start
+                                        53, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 14 : // 므로
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        53, // start
+                                        55, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 15 : // 병실
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        56, // start
+                                        58, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 16 : // 과
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        58, // start
+                                        59, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 17 : // 복도
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        60, // start
+                                        62, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 18 : // 에서
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        62, // start
+                                        64, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 19 : // 뛰다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        65, // start
+                                        67, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 20 : // 부정, 도록
+                            case 21 :
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        68, // start
+                                        71, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 22 : // 주의하다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        72, // start
+                                        75, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 23 : // 주십시오
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        77, // start
+                                        81, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -1872,7 +2279,7 @@ public class Video extends AppCompatActivity
                         }
                     }
 
-                        textView.setText(span);
+                    textView.setText(span);
 
                 } catch (IOException e) {
                     e.printStackTrace();

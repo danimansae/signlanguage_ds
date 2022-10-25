@@ -31,32 +31,45 @@
             android:textSize="40sp" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAlignment="center">
+
             <TextView
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
                 android:id="@+id/sttResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="음성인식 결과가 여기에 표시됩니다."
-                android:textSize="15dp"/>
-            <ImageButton
-                android:layout_marginLeft="30dp"
-                android:id="@+id/sttStart"
-                android:textColor="#F5F5EE"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_keyboard_voice_24"
-                />
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/stt_trn"
-                android:src="@drawable/ic_baseline_back_hand_24"/>
+                android:layout_gravity="top"
+                android:layout_marginTop="20dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:hint="음성인식 결과가 여기에 표시됩니다."
+                android:textSize="15dp" />
+
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/sttStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_keyboard_voice_24"
+                android:textColor="#F5F5EE" />
+
+            <ImageButton
+                android:id="@+id/stt_trn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_back_hand_24" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

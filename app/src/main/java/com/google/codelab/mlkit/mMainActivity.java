@@ -122,6 +122,7 @@ public class mMainActivity extends AppCompatActivity implements View.OnClickList
         sttTrnBtn=(ImageButton)findViewById(R.id.stt_trn);
         text2 = findViewById(R.id.text2);
         sttResult = findViewById(R.id.sttResult);
+        sttResult.setSelected(true); // 글자 흐르게
 
         intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE,getPackageName());

@@ -45,11 +45,9 @@
             android:layout_marginTop="30dp"
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="@id/image_view"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="@id/image_view"
             app:layout_constraintRight_toRightOf="@id/image_view"
-            app:layout_constraintTop_toTopOf="@id/image_view"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@id/image_view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
