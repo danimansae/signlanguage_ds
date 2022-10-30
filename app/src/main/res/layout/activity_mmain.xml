@@ -39,7 +39,7 @@
             android:ellipsize="marquee"
             android:gravity="center"
             android:hint="수어 통역이 필요한 이미지를\n가져와 보세요"
-            android:textSize="17dp" />
+            android:textSize="25dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
                     android:id="@+id/imageView_camera"
                     android:layout_width="160dp"
                     android:layout_height="163dp"
-                    android:layout_marginLeft="7dp"
+                    android:layout_marginLeft="8dp"
                     app:srcCompat="@drawable/camera" />
 
                 <ImageView
@@ -71,7 +71,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="205dp"
                 android:layout_gravity="center"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
@@ -82,7 +82,7 @@
                     android:layout_height="200dp"
                     android:background="@drawable/solid_button"
                     android:text="카메라"
-                    android:textSize="20dp" />
+                    android:textSize="22dp" />
 
                 <Button
                     android:id="@+id/button_gallery"
@@ -91,11 +91,11 @@
                     android:layout_marginLeft="20dp"
                     android:background="@drawable/bbsolid_button"
                     android:text="갤러리"
-                    android:textSize="20dp" />
+                    android:textSize="22dp" />
             </LinearLayout>
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="300dp"
+                android:layout_width="340dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
@@ -112,7 +112,7 @@
                     android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:hint="음성 인식 결과가 이 곳에 표시됩니다"
-                    android:textSize="15dp" />
+                    android:textSize="16dp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
 
@@ -124,16 +124,16 @@
 
                 <ImageButton
                     android:id="@+id/sttStart"
-                    android:layout_width="wrap_content"
+                    android:layout_width="55dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="20dp"
                     android:src="@drawable/ic_baseline_keyboard_voice_24"
                     android:textColor="#F5F5EE" />
 
                 <ImageButton
                     android:id="@+id/stt_trn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="55dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_back_hand_24" />
             </LinearLayout>
