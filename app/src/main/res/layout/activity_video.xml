@@ -7,33 +7,42 @@
 
     tools:ignore="MissingClass">
 
+    <ImageButton
+        android:id="@+id/bt_back"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bt_speed"
+        android:layout_width="65sp"
+        android:layout_height="30sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/speed1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="70dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginStart="170dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="170dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/surfaceView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
-
-    <SurfaceView
-        android:id="@+id/surfaceView"
-        android:layout_width="380dp"
-        android:layout_height="249dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -41,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="11dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/solid_button"
         android:elevation="10dp"
@@ -54,23 +63,73 @@
         android:textSize="10pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/surfaceView" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_speed" />
 
-    <LinearLayout
-        android:id="@+id/textList"
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="385dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:srcCompat="@drawable/solid_button"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="129dp" />
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="360dp"
+            android:layout_height="220dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageButton
+            android:id="@+id/bt_resume"
+            android:layout_width="360dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/resume2"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="393dp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/count_video_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="10dp"
+        android:text="20 /"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-        app:layout_constrainedHeight="true"
-     </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/count_video_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="1"
+        android:textColor="#5997EF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/count_video_1"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

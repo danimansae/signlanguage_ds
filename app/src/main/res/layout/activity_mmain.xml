@@ -95,12 +95,13 @@
             </LinearLayout>
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
+                android:includeFontPadding="false"
                 android:textAlignment="center">
 
                 <TextView
@@ -109,7 +110,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginTop="20dp"
-                    android:ellipsize="marquee"
                     android:gravity="center"
                     android:hint="음성 인식 결과가 이 곳에 표시됩니다"
                     android:textSize="15dp" />

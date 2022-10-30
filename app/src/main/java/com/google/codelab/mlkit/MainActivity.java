@@ -36,6 +36,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
     private Bitmap mSelectedImage;
     private Button mTrnButton;
     private Button mRegetButton;
+    private ImageButton bt_back;
     private Bitmap pic;
     DrawerLayout drawerLayout;
     private GraphicOverlay mGraphicOverlay;
@@ -133,10 +135,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar=findViewById(R.id.main_toolbar);
         // toolbar.setBackgroundColor(Color.rgb(89,165,238));
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);// 드로어를 꺼낼 홈 버튼 활성화
-        getSupportActionBar().setDisplayShowTitleEnabled(false);//툴바에 타이틀 안보이게
+        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);// 드로어를 꺼낼 홈 버튼 활성화
+        // getSupportActionBar().setDisplayShowTitleEnabled(false);//툴바에 타이틀 안보이게
         //참고: https://soohyun6879.tistory.com/77 [코딩기록:티스토리]
 
+        bt_back = findViewById(R.id.bt_back);
         mRegetButton = findViewById(R.id.button_reget);//다시 가져오기 버튼
         mTrnButton = findViewById(R.id.button_trn);//수화 번역 버튼
         mImageView = findViewById(R.id.image_view);//이미지 뷰
@@ -162,6 +165,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mImageView.setImageBitmap(pic);
+
+        // 뒤로가기 버튼
+        bt_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         //글자인식버튼
         mTextButton.setOnClickListener(new View.OnClickListener() {

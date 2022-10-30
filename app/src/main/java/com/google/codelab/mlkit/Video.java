@@ -1,10 +1,14 @@
 package com.google.codelab.mlkit;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Spannable;
@@ -19,6 +23,8 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.MediaController;
@@ -27,6 +33,7 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -48,35 +55,104 @@ public class Video extends AppCompatActivity
     MediaPlayer mediaPlayer;
     MediaController mcontroller;
 
-    private ArrayList<String> array = new ArrayList<String> ();
-    Uri uri; // 동영상 주소
-    private int count; // 동영상 개수
+    private Context mContext;
 
-    LinearLayout textList;
+    Uri uri; // 동영상 주소
+    private ArrayList<String> array = new ArrayList<String> ();
+    private int count; // 동영상 개수
+    private SharedPreferences preferences; // 속도 정보 저장장
+
+   LinearLayout textList;
     TextView textView;
+    TextView count_video_1;
+    TextView count_video_2;
+    ImageButton bt_resume;
+    ImageButton bt_back;
+    ImageButton bt_speed;
     ArrayList<String> textArray;
     SpannableStringBuilder span;
 
     String original = "";
     String fileName = "";
+    Boolean bt_speed_checked = false; // false == 원래 속도 1.75f
+    Boolean pr_bt_speed_checked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
 
-        textList = findViewById(R.id.textList);
+        mContext = this;
+
+        bt_resume = findViewById(R.id.bt_resume);
+        bt_back = findViewById(R.id.bt_back);
+        bt_speed = findViewById(R.id.bt_speed);
         textView = findViewById (R.id.textView);
+        count_video_1 = findViewById(R.id.count_video_1);
+        count_video_2 = findViewById(R.id.count_video_2);
         textView.setMovementMethod((new ScrollingMovementMethod()));
-        textArray  = new ArrayList<>();
+        textArray = new ArrayList<>();
+
+
+        // 다시보기 버튼
+        bt_resume.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (array.size() <= count) {
+                    count = 0;
+                    PreferenceManager.setBoolean(mContext, "bt_clicked", true);
+
+                    finish(); //인텐트 종료
+                    overridePendingTransition(0, 0); //인텐트 효과 없애기
+                    Intent intent = getIntent(); //인텐트
+                    startActivity(intent); //액티비티 열기
+                    overridePendingTransition(0, 0); //인텐트 효과 없애기
+                }
+            }
+        });
+
+        // 뒤로가기 버튼
+        bt_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView.setText("");
+                finish();
+            }
+        });
+
+        // 속도조절 버튼
+        bt_speed.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
+            @Override
+            public void onClick(View view) {
+                if (bt_speed_checked) {
+                    mediaPlayer.setPlaybackParams(mediaPlayer.getPlaybackParams().setSpeed(1.0f));
+                    bt_speed.setImageResource(R.drawable.speed1);
+                    bt_speed_checked = false;
+                    PreferenceManager.setBoolean(mContext, "speed", false);
+
+                } else {
+                    mediaPlayer.setPlaybackParams(mediaPlayer.getPlaybackParams().setSpeed(2.0f));
+                    bt_speed.setImageResource(R.drawable.speed2);
+                    bt_speed_checked = true;
+                   PreferenceManager.setBoolean(mContext, "speed", true);
+                }
+            }
+        });
 
         // 번역된 최종 문장 표시
         Intent intent = getIntent();
         // String output = intent.getStringExtra("out_put");
         textArray = intent.getStringArrayListExtra("textArray");
         original = intent.getStringExtra("original");
+        // Toast.makeText(getApplicationContext(), textArray.get(0), Toast.LENGTH_SHORT).show();
 
-        textView.setText(original);
+        if (textArray.get(0).equals("감사하 ")) {
+            textView.setText("감사합니다♡");
+
+        } else {
+            textView.setText(original);
+        }
 
         /*
         for (int i = 0 ; i < textArray.size() ; i++) {
@@ -87,8 +163,9 @@ public class Video extends AppCompatActivity
 
         // pathReference.get
 
-        fileName = textArray.get(0); // 형태소 단위로 수어 영상 매칭 준비
+        /// fileName = textArray.get(0); // 형태소 단위로 수어 영상 매칭 준비
 
+        /*
         // Encoding...
         try {
             fileName = URLEncoder.encode(fileName, "UTF-8");
@@ -96,6 +173,7 @@ public class Video extends AppCompatActivity
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        */
 
         /*
         if (count != 0) {
@@ -194,14 +272,27 @@ public class Video extends AppCompatActivity
             );
 
         } else if (textArray.get(0).equals("부식성 ")) {
-            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.busik);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.seong);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.muljil);
+            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.busik);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.seong);
+            array.add("android.resource://" + getPackageName() + "/" + R.raw.muljil);
 
             span.setSpan(
                     new ForegroundColorSpan(Color.RED),
                     0, // start
                     2, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
+
+        } else if (textArray.get(0).equals("안녕하 ")) {
+            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.hello);
+
+        } else if (textArray.get(0).equals("감사하 ")) {
+            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.thanks);
+
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    5, // start
+                    6, // end
                     Spannable.SPAN_EXCLUSIVE_INCLUSIVE
             );
 
@@ -471,18 +562,11 @@ public class Video extends AppCompatActivity
             array.add("android.resource://" + getPackageName() + "/" + R.raw.haengdong);
             array.add("android.resource://" + getPackageName() + "/" + R.raw.safety);
             array.add("android.resource://" + getPackageName() + "/" + R.raw.gwanlam);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.sil);
             array.add("android.resource://" + getPackageName() + "/" + R.raw.caution);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.sahang);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.protect);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.and);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.move);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.sik);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.or);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.climb);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.disk);
         }
 
+        count_video_1.setText((array.size()+1) + " /");
+        
         textView.setText(span);
 
         /*
@@ -530,6 +614,22 @@ public class Video extends AppCompatActivity
 
             start();
 
+            // 다시보기 버튼이 눌린 경우
+            if (PreferenceManager.getBoolean(mContext, "bt_clicked")) {
+                pr_bt_speed_checked = PreferenceManager.getBoolean(mContext, "speed");
+
+                if (pr_bt_speed_checked) {
+                    mediaPlayer.setPlaybackParams(mediaPlayer.getPlaybackParams().setSpeed(2.0f));
+                    bt_speed.setImageResource(R.drawable.speed2);
+                    bt_speed_checked = true;
+
+                } else {
+                    mediaPlayer.setPlaybackParams(mediaPlayer.getPlaybackParams().setSpeed(1.0f));
+                    bt_speed.setImageResource(R.drawable.speed1);
+                    bt_speed_checked = false;
+                }
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -538,6 +638,7 @@ public class Video extends AppCompatActivity
 
     // 여러개 동영상 처리
     MediaPlayer.OnCompletionListener completionListener = new MediaPlayer.OnCompletionListener() {
+        @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
         public void onCompletion(MediaPlayer mp) {
             // 재생할 비디오가 남아있을 경우
@@ -556,6 +657,14 @@ public class Video extends AppCompatActivity
 
                     mp.prepare(); // 계속 오류 뜸
                     count++;
+
+                    count_video_2.setText("" + (count+1));
+
+                    if (bt_speed_checked) {
+                        mediaPlayer.setPlaybackParams(mediaPlayer.getPlaybackParams().setSpeed(2.0f));
+                    } else {
+                        mediaPlayer.setPlaybackParams(mediaPlayer.getPlaybackParams().setSpeed(1.0f));
+                    }
 
                     // 로컬용 색 표시
                     span = new SpannableStringBuilder(original);
@@ -738,7 +847,7 @@ public class Video extends AppCompatActivity
                                 );
                                 break;
 
-                            case 8 : // 예정
+                            case 8 :  // 예정
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
                                         21, // start
@@ -842,7 +951,7 @@ public class Video extends AppCompatActivity
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
                                         64, // start
-                                        67, // end
+                                        66, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -871,8 +980,8 @@ public class Video extends AppCompatActivity
                             case 2 : // 병동
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        6, // start
-                                        8, // end
+                                        5, // start
+                                        7, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -880,8 +989,8 @@ public class Video extends AppCompatActivity
                             case 3 : // 에서
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        8, // start
-                                        10, // end
+                                        7, // start
+                                        9, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -889,8 +998,8 @@ public class Video extends AppCompatActivity
                             case 4 : // 보호자
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        12, // start
-                                        15, // end
+                                        11, // start
+                                        14, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -898,8 +1007,8 @@ public class Video extends AppCompatActivity
                             case 5 : // 항상
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        17, // start
-                                        19, // end
+                                        16, // start
+                                        18, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -907,8 +1016,8 @@ public class Video extends AppCompatActivity
                             case 6 : // 환아
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        20, // start
-                                        22, // end
+                                        19, // start
+                                        21, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -916,8 +1025,8 @@ public class Video extends AppCompatActivity
                             case 7 : // 와
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        22, // start
-                                        23, // end
+                                        21, // start
+                                        22, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -925,8 +1034,8 @@ public class Video extends AppCompatActivity
                             case 8 : // 동행
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        24, // start
-                                        28, // end
+                                        23, // start
+                                        27, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -934,8 +1043,8 @@ public class Video extends AppCompatActivity
                             case 9 : // 바라다
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        33, // start
-                                        37, // end
+                                        32, // start
+                                        36, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -943,8 +1052,8 @@ public class Video extends AppCompatActivity
                             case 10 : // 넘어지다
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        39, // start
-                                        42, // end
+                                        38, // start
+                                        41, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -952,8 +1061,8 @@ public class Video extends AppCompatActivity
                             case 11 : // 거나
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        42, // start
-                                        44, // end
+                                        41, // start
+                                        43, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -961,8 +1070,8 @@ public class Video extends AppCompatActivity
                             case 12 : // 부딪히다
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        45, // start
-                                        48, // end
+                                        44, // start
+                                        47, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -970,8 +1079,8 @@ public class Video extends AppCompatActivity
                             case 13 : // 있다
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        51, // start
-                                        53, // end
+                                        50, // start
+                                        52, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -979,8 +1088,8 @@ public class Video extends AppCompatActivity
                             case 14 : // 므로
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        53, // start
-                                        55, // end
+                                        52, // start
+                                        54, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -988,8 +1097,8 @@ public class Video extends AppCompatActivity
                             case 15 : // 병실
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        56, // start
-                                        58, // end
+                                        55, // start
+                                        57, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -997,8 +1106,8 @@ public class Video extends AppCompatActivity
                             case 16 : // 과
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        58, // start
-                                        59, // end
+                                        57, // start
+                                        58, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -1006,8 +1115,8 @@ public class Video extends AppCompatActivity
                             case 17 : // 복도
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        60, // start
-                                        62, // end
+                                        59, // start
+                                        61, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -1015,8 +1124,8 @@ public class Video extends AppCompatActivity
                             case 18 : // 에서
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        62, // start
-                                        64, // end
+                                        61, // start
+                                        63, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -1024,8 +1133,8 @@ public class Video extends AppCompatActivity
                             case 19 : // 뛰다
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        65, // start
-                                        67, // end
+                                        64, // start
+                                        66, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -1034,8 +1143,8 @@ public class Video extends AppCompatActivity
                             case 21 :
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        68, // start
-                                        71, // end
+                                        67, // start
+                                        70, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -1043,8 +1152,8 @@ public class Video extends AppCompatActivity
                             case 22 : // 주의하다
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        72, // start
-                                        75, // end
+                                        71, // start
+                                        74, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -1052,8 +1161,8 @@ public class Video extends AppCompatActivity
                             case 23 : // 주십시오
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
-                                        77, // start
-                                        81, // end
+                                        76, // start
+                                        80, // end
                                         Spannable.SPAN_EXCLUSIVE_INCLUSIVE
                                 );
                                 break;
@@ -2278,11 +2387,20 @@ public class Video extends AppCompatActivity
                                 break;
                         }
                     }
-
                     textView.setText(span);
 
                 } catch (IOException e) {
                     e.printStackTrace();
+                }
+
+            } else {
+                if (bt_resume.getVisibility() == View.GONE) {
+                    bt_resume.setVisibility(View.VISIBLE);
+                    bt_resume.setEnabled(true);
+
+                } else {
+                    bt_resume.setVisibility(View.GONE);
+                    bt_resume.setEnabled(false);
                 }
             }
         }
@@ -2355,7 +2473,6 @@ public class Video extends AppCompatActivity
         return 0;
     }
 
-
     Handler handler;    // android.os.Handler
 
     @Override
@@ -2374,12 +2491,14 @@ public class Video extends AppCompatActivity
         });
     }
 
+    /*
     void createTextView (String text) {
         TextView textView = new TextView(getApplicationContext());
         textView.setText(text);
         textView.setTextSize(25);
         textList.addView(textView);
     }
+    */
 
     @Override
     public void onBackPressed() {
