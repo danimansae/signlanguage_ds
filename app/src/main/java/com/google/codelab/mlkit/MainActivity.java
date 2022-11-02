@@ -186,12 +186,19 @@ public class MainActivity extends AppCompatActivity {
         mTrnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (out_text.equals("")) {
-                    Toast.makeText(getApplicationContext(), "글자 인식 버튼을 눌러주세요.",Toast.LENGTH_LONG).show();
+                int status = NetworkStatus.getConnectivityStatus(getApplicationContext());
+
+                if(status == NetworkStatus.TYPE_NOT_CONNECTED){
+                    Toast.makeText(getApplicationContext(), "인터넷 연결을 확인해 주세요!", Toast.LENGTH_SHORT).show();
+
                 } else {
-                    Intent intent = new Intent(getApplicationContext(), Translation.class);
-                    intent.putExtra("out_text", out_text);
-                    startActivity(intent);
+                    if (out_text.equals("")) {
+                        Toast.makeText(getApplicationContext(), "글자 인식 버튼을 눌러주세요.",Toast.LENGTH_LONG).show();
+                    } else {
+                        Intent intent = new Intent(getApplicationContext(), Translation.class);
+                        intent.putExtra("out_text", out_text);
+                        startActivity(intent);
+                    }
                 }
             }
         });

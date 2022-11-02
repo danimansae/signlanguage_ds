@@ -50,6 +50,9 @@ import java.util.ArrayList;
 public class Video extends AppCompatActivity
         implements SurfaceHolder.Callback, MediaPlayer.OnPreparedListener, MediaController.MediaPlayerControl {
 
+    StorageReference storageRef = FirebaseStorage.getInstance().getReference();
+    StorageReference pathReference;
+
     SurfaceView surfaceView;
     SurfaceHolder surfaceHolder;
     MediaPlayer mediaPlayer;
@@ -62,7 +65,7 @@ public class Video extends AppCompatActivity
     private int count; // 동영상 개수
     private SharedPreferences preferences; // 속도 정보 저장장
 
-   LinearLayout textList;
+    LinearLayout textList;
     TextView textView;
     TextView count_video_1;
     TextView count_video_2;
@@ -197,8 +200,18 @@ public class Video extends AppCompatActivity
         span = new SpannableStringBuilder(textView.getText());
 
         if (textArray.get(0).equals("급성 ")) {
-            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.geubseong);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.dogseong);
+            Boolean check = PreferenceManager.getBoolean(mContext, "geubseong");
+
+            if (!check) {
+                uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EA%B8%89%EC%84%B1.mp4?alt=media&token=e880fbe0-f6f1-4575-bebb-ed277a62c066");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%8F%85%EC%84%B1.mp4?alt=media&token=8b1e7edc-59c5-48c4-8aa4-923a7c0bc186");
+
+                PreferenceManager.setBoolean(mContext, "geubseong", true);
+
+            } else {
+                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.geubseong);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.dogseong);
+            }
 
             span.setSpan(
                     new ForegroundColorSpan(Color.RED),
@@ -296,6 +309,33 @@ public class Video extends AppCompatActivity
                     Spannable.SPAN_EXCLUSIVE_INCLUSIVE
             );
 
+        } else if (textArray.get(0).equals("공모전 ")) {
+            Boolean check = PreferenceManager.getBoolean(mContext, "contest");
+
+            if (!check) {
+                uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%8C%80%ED%9A%8C.mp4?alt=media&token=8a40f57e-de3d-471b-b51f-5ecce34967b3");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%8B%A0%EC%B2%AD%ED%95%98%EB%8B%A4.mp4?alt=media&token=de867c70-5c10-4e02-a6bc-abcbf0714c99");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%82%AC%EB%9E%8C.mp4?alt=media&token=18298faf-e87f-4916-86d8-dad3372610ba");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B0%B1.mp4?alt=media&token=a7db6863-9036-486f-a6da-ea962d4401b0");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%84%98%EB%8B%A4.mp4?alt=media&token=18bb010e-7256-4ebc-810d-5cd89c488d6c");
+
+                PreferenceManager.setBoolean(mContext, "contest", true);
+
+            } else {
+                uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.contest);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.apply);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.people);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.hundred);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.over);
+            }
+
+            span.setSpan(
+                    new ForegroundColorSpan(Color.RED),
+                    0, // start
+                    3, // end
+                    Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+            );
+
         } else if (textArray.get(0).equals("잠시 ")) {
             uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.jamsi);
             array.add("android.resource://" + getPackageName()+ "/" + R.raw.after);
@@ -328,30 +368,62 @@ public class Video extends AppCompatActivity
             );
 
         } else if (textArray.get(0).equals("일반 ")) {
-            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.ilban);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.soa);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.byeongdong);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.at);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.bohoja);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.always);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.hwanja);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.wa);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.dongban);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.stumble);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.or);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.budijhida);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.issda);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.so);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.byeongdong);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.corridor);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.at);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.run);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.bujeong);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.dolog);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.jusibsio);
+            Boolean check = PreferenceManager.getBoolean(mContext, "contest");
+
+            if (!check) {
+                uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%9D%BC%EB%B0%98.mp4?alt=media&token=80575cc5-6e27-4832-b179-8b7c703732f9");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%86%8C%EC%95%84.mp4?alt=media&token=4f266d05-6fca-4b59-ac62-3590c56b7850");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B3%91%EC%8B%A4.mp4?alt=media&token=a33f543b-f82f-41c4-a0db-2347f2f0682a");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%97%90%EC%84%9C%EB%8A%94.mp4?alt=media&token=91a201f7-7a8a-46a8-bb23-dcb678390a48");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B3%B4%ED%98%B8%EC%9E%90.mp4?alt=media&token=988b0349-6130-4a05-9b15-e2aa2f5d7408");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%ED%95%AD%EC%83%81.mp4?alt=media&token=46c0a9f0-a175-4470-a8a0-79eb604ede33");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%ED%99%98%EC%95%84.mp4?alt=media&token=4488d264-4cec-4d6d-a871-47c931d22263");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%99%80.mp4?alt=media&token=639c52ae-fc92-4581-bf00-8d7c548109e8");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%8F%99%ED%96%89.mp4?alt=media&token=b1891d72-883b-43c6-a7ae-14c234d0942f");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B0%94%EB%9D%BC%EB%8B%A4.mp4?alt=media&token=995dfd71-0bbe-4d28-ab25-b82022d6eee0");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%84%98%EC%96%B4%EC%A7%80%EB%8B%A4.mp4?alt=media&token=55207be0-759a-4d41-bfdf-c86409cdb911");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/-%EA%B1%B0%EB%82%98.mp4?alt=media&token=f3de9db4-d84b-4bdf-9ac3-cfd8bfe17d53");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B6%80%EB%94%AA%ED%9E%88%EB%8B%A4.mp4?alt=media&token=9c148d12-16f5-44e5-a875-cc148c210254");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%9E%88%EB%8B%A4.mp4?alt=media&token=baac10c1-db9c-4457-a808-4f3af742fd70");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/-%EB%AF%80%EB%A1%9C.mp4?alt=media&token=ede673f9-eb32-4461-a209-cb50582e1aeb");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B3%91%EC%8B%A4.mp4?alt=media&token=9752f67e-7b71-4bb6-a94b-7968fe5e4cc8");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EA%B7%B8%EB%A6%AC%EA%B3%A0.mp4?alt=media&token=3237a34c-6172-45b2-94ed-eb4bc9fbcc56");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B3%B5%EB%8F%84.mp4?alt=media&token=950ab684-b344-494c-905b-5221411a173a");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%97%90%EC%84%9C%EB%8A%94.mp4?alt=media&token=91a201f7-7a8a-46a8-bb23-dcb678390a48");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%9B%B0%EB%8B%A4.mp4?alt=media&token=be081ade-b973-4318-a893-8d2cae4abae7");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%95%8A%EB%8B%A4.mp4?alt=media&token=8b6b1c56-2647-4806-bab0-f58e18591a9a");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/-%EB%8F%84%EB%A1%9D.mp4?alt=media&token=ff8b2dc4-3e61-48cc-9853-8dae63f8b38d");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%A3%BC%EC%9D%98.mp4?alt=media&token=10bbe04e-3ccc-496b-a4fc-511b3298fbcb");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%A3%BC%EC%8B%AD%EC%8B%9C%EC%98%A4.mp4?alt=media&token=12eccdc4-fca0-4ae4-9149-fbc09dc342e0");
+
+                PreferenceManager.setBoolean(mContext, "contest", true);
+
+            } else {
+                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.ilban);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.soa);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.byeongdong);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.at);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.bohoja);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.always);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.hwanja);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.wa);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.dongban);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.wish);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.stumble);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.or);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.budijhida);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.issda);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.so);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.byeongdong);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.and);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.corridor);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.at);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.run);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.no);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.dolog);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.jusibsio);
+            }
 
             span.setSpan(
                     new ForegroundColorSpan(Color.RED),
@@ -385,37 +457,63 @@ public class Video extends AppCompatActivity
 
 
         } else if (textArray.get(0).equals("낙상주의 ")) {
+            Boolean check = PreferenceManager.getBoolean(mContext, "naksang");
+
+            if (!check) {
+                uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%82%99%EC%83%81.mp4?alt=media&token=f7158f57-188f-4a71-8149-cb20968aea47");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%A3%BC%EC%9D%98.mp4?alt=media&token=10bbe04e-3ccc-496b-a4fc-511b3298fbcb");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%ED%99%94%EC%9E%A5%EC%8B%A4.mp4?alt=media&token=ccb5e3cc-bf3f-44b3-8412-db3fa6e76e1c");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%ED%98%BC%EC%9E%90.mp4?alt=media&token=8dac7ae3-a35d-4f6f-82dc-3895555a3c18");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EA%B0%80%EB%8B%A4.mp4?alt=media&token=e883331b-752a-4edb-bc33-1db4fa59a343");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B6%80%EC%A0%95.mp4?alt=media&token=07da8d83-32af-4f59-9ae1-1f887aae868a");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%AF%B8%EC%95%88.mp4?alt=media&token=a5e929dd-45e1-4b3c-a7d2-b17556ad1c6c");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%ED%95%B4%EC%84%9C.mp4?alt=media&token=f4d54167-32ff-4476-a37d-522da2dcaa07");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%ED%98%BC%EC%9E%90.mp4?alt=media&token=8dac7ae3-a35d-4f6f-82dc-3895555a3c18");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EA%B0%80%EB%8B%A4.mp4?alt=media&token=e883331b-752a-4edb-bc33-1db4fa59a343");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%A7%90%EB%8B%A4.mp4?alt=media&token=54690459-f3c0-4669-99a5-6b25adc10530");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EC%84%B8%EC%9A%94.mp4?alt=media&token=e7aad638-ed9c-4aa2-9a68-d40fd59fbf6e");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B0%98%EB%93%9C%EC%8B%9C.mp4?alt=media&token=cd93cabe-7c1a-4682-a756-4ffb94f040da");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%B3%B4%ED%98%B8%EC%9E%90.mp4?alt=media&token=12d4d46c-f675-4064-ada2-9c2f579c1046");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%8F%99%EB%B0%98.mp4?alt=media&token=dcff2bcf-732a-4f96-b3bb-ffbae57e93b4");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%ED%95%84%EC%9A%94.mp4?alt=media&token=ed168bf7-49f3-4bf0-ba9e-541adfc8e60d");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EB%A9%B4.mp4?alt=media&token=ec32601f-eba8-4877-a6f5-4dad4026520a");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%EA%B0%84%ED%98%B8%EC%82%AC.mp4?alt=media&token=bb2acf2a-53d9-4719-88ec-96074a68bfca");
+                array.add("https://firebasestorage.googleapis.com/v0/b/dukkebi-981f7.appspot.com/o/%ED%98%B8%EC%B6%9C.mp4?alt=media&token=3bb32cd5-20e8-462d-a783-fbc334730533");
+
+                PreferenceManager.setBoolean(mContext, "naksang", true);
+
+            } else {
+                uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.nagsang);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
+
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.toilet);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.alone);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.go);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.bujeong);
+
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.sorry);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.haeseo);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.alone);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.go);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.malda);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.seyo);
+
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.certainly);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.bohoja);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.dongban);
+
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.need);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.myeon);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.nurse);
+                array.add("android.resource://" + getPackageName()+ "/" + R.raw.call);
+            }
+
             span.setSpan(
                     new ForegroundColorSpan(Color.RED),
                     0, // start
                     2, // end
                     Spannable.SPAN_EXCLUSIVE_INCLUSIVE
             );
-
-            uri = Uri.parse("android.resource://" + getPackageName()+ "/" + R.raw.nagsang);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.caution);
-
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.toilet);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.alone);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.go);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.bujeong);
-
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.sorry);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.haeseo);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.alone);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.go);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.malda);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.seyo);
-
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.certainly);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.bohoja);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.dongban);
-
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.need);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.myeon);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.nurse);
-            array.add("android.resource://" + getPackageName()+ "/" + R.raw.call);
-
 
         } else if (textArray.get(0).equals("실습실 ")) {
             span.setSpan(
@@ -557,12 +655,7 @@ public class Video extends AppCompatActivity
             array.add("android.resource://" + getPackageName()+ "/" + R.raw.seyo);
 
         } else {
-            uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.sahang);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.lean);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.haengdong);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.safety);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.gwanlam);
-            array.add("android.resource://" + getPackageName() + "/" + R.raw.caution);
+            Toast.makeText(getApplicationContext(), "맞는 영상을 찾을 수 없습니다.\n다시 인식해 주세요!", Toast.LENGTH_SHORT).show();
         }
 
         count_video_1.setText((array.size()+1) + " /");
@@ -769,7 +862,7 @@ public class Video extends AppCompatActivity
 
                     } else if (textArray.get(0).equals("이 ")) {
                         switch (count) {
-                            case 1 : // 자리
+                            case 1: // 자리
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
                                         2, // start
@@ -778,7 +871,7 @@ public class Video extends AppCompatActivity
                                 );
                                 break;
 
-                            case 2 : // 비워두다
+                            case 2: // 비워두다
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
                                         6, // start
@@ -787,7 +880,7 @@ public class Video extends AppCompatActivity
                                 );
                                 break;
 
-                            case 3 : // 세요
+                            case 3: // 세요
                                 span.setSpan(
                                         new ForegroundColorSpan(Color.RED),
                                         9, // start
@@ -796,6 +889,45 @@ public class Video extends AppCompatActivity
                                 );
                                 break;
 
+                        }
+
+                    } else if (textArray.get(0).equals("공모전 ")) {
+                        switch (count) {
+                            case 1: // 신청하다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        5, // start
+                                        8, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 2: // 사람
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        9, // start
+                                        11, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 3: // 백
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        13, // start
+                                        14, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
+
+                            case 4: // 넘다
+                                span.setSpan(
+                                        new ForegroundColorSpan(Color.RED),
+                                        17, // start
+                                        20, // end
+                                        Spannable.SPAN_EXCLUSIVE_INCLUSIVE
+                                );
+                                break;
                         }
 
                     } else if (textArray.get(0).equals("잠시 ")) {

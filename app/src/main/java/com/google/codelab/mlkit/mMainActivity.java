@@ -147,9 +147,16 @@ public class mMainActivity extends AppCompatActivity implements View.OnClickList
         sttTrnBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Translation.class);
-                intent.putExtra("out_text", strs);
-                startActivity(intent);
+                int status = NetworkStatus.getConnectivityStatus(getApplicationContext());
+
+                if(status == NetworkStatus.TYPE_NOT_CONNECTED){
+                    Toast.makeText(getApplicationContext(), "인터넷 연결을 확인해 주세요!", Toast.LENGTH_SHORT).show();
+
+                } else {
+                    Intent intent = new Intent(getApplicationContext(), Translation.class);
+                    intent.putExtra("out_text", strs);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -201,7 +208,7 @@ public class mMainActivity extends AppCompatActivity implements View.OnClickList
                     message = "퍼미션 없음";
                     break;
                 case SpeechRecognizer.ERROR_NETWORK:
-                    message = "네트워크 에러";
+                    message = "인터넷 연결을 확인해 주세요!";
                     break;
                 case SpeechRecognizer.ERROR_NETWORK_TIMEOUT:
                     message = "네트웍 타임아웃";
